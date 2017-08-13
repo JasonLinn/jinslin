@@ -1,0 +1,30 @@
+{
+  "name": "jinslin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass:public/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "browser-sync": "^2.18.13",
+    "config-lite": "^2.0.0",
+    "express": "^4.15.4",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-zip": "^4.0.0",
+    "mongoose": "^4.11.6",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-rc.3",
+    "semantic-ui-sass": "^2.2.11",
+    "webpack": "^3.5.4"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    include ./components/header.pug
+    
+    title Document
+body
+    .container
+        .row
+            .col-md-10
+                .text-center 後台登入
+                    .text-center.form-group.control-label
+                        label 帳號：
+                        input(type="text")
+                    .text-center
+                        label 密碼：
+                        input(type="password")
+                .text-center
+                    button(type="button").btn.btn-success 登入
+        
