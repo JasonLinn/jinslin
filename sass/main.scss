@@ -1,7 +1,16 @@
-// @import "semantic-ui";
+@import "./bootstrap/bootstrap";
 body{
-    background-color: #ccc;
+    // background-color: #ccc;
 }
-input{
+.nav_ul{
+    // width: 20%;
+}
+.nav_li{
     
+}
+.cms_table{
+    margin-top:50px;
+}
+.btn{
+    cursor: pointer;
 }

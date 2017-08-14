@@ -20,7 +20,7 @@ const server = http.createServer(app);
 
 const port = process.env.PORT || config.port;
 
-server.listen(port,function () {
+server.listen(3001,function () {
     console.log(`${pkg.name} listenging on port ${config.port}`);
 });
 reload(app);

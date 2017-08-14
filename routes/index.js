@@ -3,4 +3,5 @@ module.exports = function (app) {
         res.render('index')
     })
     app.use('/login',require('./login'));
+    app.use('/news',require('./news'));
 }

@@ -1,0 +1,40 @@
+extends ./template.pug
+
+block content
+    .container
+        table.table.table-hover.table-striped.cms_table
+            thead
+                tr
+                    th 編號
+                    th 標題
+                    th 內容
+                    th 圖片
+                    th 編輯
+                    th 刪除
+            tbody
+                tr
+                    th(scope='row') 1
+                    td Mark
+                    td Otto
+                    td Otto
+                    td
+                        button.btn.btn-primary(type='button') 編輯
+                    td
+                        button.btn.btn-danger(type='button') 刪除
+                tr
+                    th(scope='row') 2
+                    td Jacob
+                    td Thornton
+                    td @fat
+                tr
+                    th(scope='row') 3
+                    td(colspan='2') Larry the Bird
+                    td @twitter
+
+
+
+                
+    //- nav
+    //-     .logo
+    //-     ul.nav_ul
+    //-         li.nav_li 最新消息
