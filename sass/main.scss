@@ -11,6 +11,15 @@ body{
 .cms_table{
     margin-top:50px;
 }
+.cms_edit{
+    display: none;
+    textarea{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+}
 .btn{
     cursor: pointer;
 }
