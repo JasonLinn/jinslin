@@ -6645,6 +6645,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   margin-top: 50px; }
 
 .cms_edit {
+  margin-top: 50px;
   display: none; }
   .cms_edit textarea {
     width: 100%; }

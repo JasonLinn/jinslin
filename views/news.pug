@@ -33,7 +33,7 @@ block content
                     if(news)
                         each newff in news
                             td @twitter #{newff.admin_acc}
-        form
+        form(action="/")
             table.table.table-hover.table-striped.cms_edit
                 thead
                     tr
@@ -53,7 +53,7 @@ block content
                         td
                         td.text-right
                             button.btn.btn-cansel(type='button' data-type="cancel") 取消編輯 
-                            button.btn.btn-success(type='button' data-type="confirm") 確定
+                            button.btn.btn-success(type='submit' data-type="confirm") 確定
 
                 
     //- nav
