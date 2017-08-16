@@ -26,11 +26,11 @@ Admin.find({}).exec(function (err, result) {
 
 router.get('/', function (req, res, next) {
     var aa=function (res){
-        console.log(res, 'dataaaa#@@@@@@@@@@@@@@@@@@@@@@@@');
+        // console.log(res, 'dataaaa#@@@@@@@@@@@@@@@@@@@@@@@@');
     }
     Admin.find({},aa(res)).exec(function (err, result) {
         if (!err) {
-            console.log(result,'seccece');
+            // console.log(result,'seccece');
             res.render('news',{
                 news:result
             })
