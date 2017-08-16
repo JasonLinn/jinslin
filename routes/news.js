@@ -18,10 +18,24 @@ const adminSchema = new mongoose.Schema({
     admin_psw: String
 })
 
+
+
 var Admin = mongoose.model('admin',adminSchema);
-Admin.find({}).exec(function (err, result) {
-    console.log('result',result);
-});
+const Jason = new Admin({
+    admin_acc: 'hi',
+    admin_psw: 'hi'
+})
+// Jason.save(function (err) {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log('save success');
+//     }
+// })
+
+// Admin.find({}).exec(function (err, result) {
+//     console.log('result',result);
+// });
 // console.log(Admin);
 
 router.get('/', function (req, res, next) {

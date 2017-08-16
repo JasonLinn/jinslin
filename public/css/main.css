@@ -6644,6 +6644,14 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .cms_table {
   margin-top: 50px; }
 
+.cms_edit {
+  margin-top: 50px;
+  display: none; }
+  .cms_edit textarea {
+    width: 100%; }
+  .cms_edit input {
+    width: 100%; }
+
 .btn {
   cursor: pointer; }
 

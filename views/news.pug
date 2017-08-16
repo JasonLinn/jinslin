@@ -1,6 +1,7 @@
 extends ./template.pug
 
 block content
+    
     .container
         table.table.table-hover.table-striped.cms_table
             thead
@@ -18,9 +19,9 @@ block content
                     td Otto
                     td Otto
                     td
-                        button.btn.btn-primary(type='button') 編輯
+                        button.btn.btn-primary(type='button' data-type="edit" data-role="page") 編輯
                     td
-                        button.btn.btn-danger(type='button') 刪除
+                        button.btn.btn-danger(type='button' data-type="delete") 刪除
                 tr
                     th(scope='row') 2
                     td Jacob
@@ -29,9 +30,30 @@ block content
                 tr
                     th(scope='row') 3
                     td(colspan='2') Larry the Bird
-                    td @twitter
-
-
+                    if(news)
+                        each newff in news
+                            td @twitter #{newff.admin_acc}
+        form(action="/")
+            table.table.table-hover.table-striped.cms_edit
+                thead
+                    tr
+                        th.text-centeralign-middle 標題
+                        td
+                            input(type="text")
+                    tr
+                        th.text-centeralign-middle.align-middle 內容
+                        td
+                            textarea(name="", cols="30", rows="10").align-middle
+                    tr
+                        th.text-centeralign-middle 圖片
+                        td  img
+                            img(src="", alt="")
+                            input(type="file")
+                    tr
+                        td
+                        td.text-right
+                            button.btn.btn-cansel(type='button' data-type="cancel") 取消編輯 
+                            button.btn.btn-success(type='submit' data-type="confirm") 確定
 
                 
     //- nav
