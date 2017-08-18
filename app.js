@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //   keepExtensions: true// 保留后缀
 // }));
 
+
 routes(app);
 // app.use('/',function() {
 //     console.log(`22`)
