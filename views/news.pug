@@ -33,22 +33,22 @@ block content
                     if(news)
                         each newff in news
                             td @twitter #{newff.admin_acc}
-        form(action="/")
+        form(action="/news" method="post" enctype="multipart/form-data")
             table.table.table-hover.table-striped.cms_edit
                 thead
                     tr
                         th.text-centeralign-middle 標題
                         td
-                            input(type="text")
+                            input(type="text" name="news_title" )
                     tr
                         th.text-centeralign-middle.align-middle 內容
                         td
-                            textarea(name="", cols="30", rows="10").align-middle
+                            textarea(name="news_content", cols="30", rows="10").align-middle
                     tr
                         th.text-centeralign-middle 圖片
                         td  img
                             img(src="", alt="")
-                            input(type="file")
+                            input(type="file" name="news_img")
                     tr
                         td
                         td.text-right
