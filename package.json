@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch sass:public/css",
     "dev": "nodemon app.js -e pug,js,scss,css",
+    "start":"node app.js",
     "both": "concurrently \"npm run sass\" \"npm run dev\""
   },
   "author": "",
