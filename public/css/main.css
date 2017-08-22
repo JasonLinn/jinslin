@@ -6652,10 +6652,25 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .cms_edit input {
     width: 100%; }
 
+button {
+  cursor: pointer; }
+
 .btn {
   cursor: pointer; }
 
 .news_img img {
   width: 100px; }
+
+.news_update_img img {
+  width: 100px; }
+
+.news_creact_tr {
+  border: none; }
+  .news_creact_tr td {
+    border-top: none; }
+
+.news_create_td {
+  border-top: none !important;
+  border: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -15,6 +15,7 @@ var storage = multer.diskStorage({
     callback(null, file.originalname)
   }
 });
+//上傳檔案的pkg
 var upload = multer({
   dest: path.join(__dirname, './public/upload/'),
   storage:storage
@@ -61,6 +62,7 @@ var Newsqq = mongoose.model('newsqq',newsSchema);
 // });
 // console.log(Admin);
 
+
 router.get('/', function (req, res, next) {
     var aa=function (res){
         // console.log(res, 'dataaaa#@@@@@@@@@@@@@@@@@@@@@@@@');
@@ -68,7 +70,7 @@ router.get('/', function (req, res, next) {
     Newsqq.find({}).exec(function (err, result) {
         if (!err) {
             //console.log(result,'seccece');
-            res.render('news',{
+            res.render('cms/news',{
                 news:result
             })
         } else {
@@ -95,8 +97,47 @@ router.post('/',upload.single('news_img'),function (req,res,next){
             console.log('save success');
         }
     })
-    res.redirect('news')
+    res.redirect('/news')
 })
-
+router.post('/:postId/update',upload.single('news_img'),function (req,res,next){
+    console.log(req.body.news_title)
+    console.log(req.body.news_content)
+    // console.log(req.body.news_img)
+    console.log(req.file.path)
+    // var newsff = new Newsqq({
+    //     news_title:req.body.news_title,
+    //     news_content:req.body.news_content,
+    //     news_img:req.file.path.slice(6)
+    // })
+    var data ={
+        news_title:req.body.news_title,
+        news_content:req.body.news_content,
+        news_img:req.file.path.slice(6)
+    }
+    var newsId = {
+        _id:req.params.postId
+    }
+    Newsqq.update({_id:req.params.postId},data,function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('save success');
+        }
+    })
+    res.redirect('/news')
+})
+router.get('/:postId/remove',function (req,res,next){
+    // console.log(req)
+    console.log(req.params.postId)
+    
+    Newsqq.remove({_id:req.params.postId},function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('delete success');
+        }
+    })
+    res.redirect('/news')
+})
 
 module.exports = router;
