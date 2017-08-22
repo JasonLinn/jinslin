@@ -6655,4 +6655,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .btn {
   cursor: pointer; }
 
+.news_img img {
+  width: 100px; }
+
 /*# sourceMappingURL=main.css.map */

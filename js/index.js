@@ -7,5 +7,4 @@ $(function (){
         $('.cms_table').show();
         $('.cms_edit').hide();
     })
-    
 })

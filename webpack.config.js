@@ -39,7 +39,7 @@ const index = new HtmlWebpackPlugin({
 
 module.exports = {
     entry: {
-        index: './src/js/index.js',
+        index: './js/index.js',
         // a: './js/a.js',
         // router: './js/react-router.js',
         // //直接改變名稱到指定資料夾
@@ -51,7 +51,7 @@ module.exports = {
     watch: true,
     output: {
         //resolve 的函式是為了不管在 Windows 或是 Unix 上都可以正確解析路徑
-        path: path.resolve(__dirname, './js'),
+        path: path.resolve(__dirname, './public/js'),
         publicPath: "/",//讓router有一個公共的路徑
         //這邊用[name]，產出的js才會有各個entry的
         filename: '[name].js'

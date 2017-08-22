@@ -13,26 +13,28 @@ block content
                     th 編輯
                     th 刪除
             tbody
-                tr
-                    th(scope='row') 1
-                    td Mark
-                    td Otto
-                    td Otto
-                    td
-                        button.btn.btn-primary(type='button' data-type="edit" data-role="page") 編輯
-                    td
-                        button.btn.btn-danger(type='button' data-type="delete") 刪除
-                tr
-                    th(scope='row') 2
-                    td Jacob
-                    td Thornton
-                    td @fat
-                tr
-                    th(scope='row') 3
-                    td(colspan='2') Larry the Bird
-                    if(news)
-                        each newff in news
-                            td @twitter #{newff.admin_acc}
+                //- tr
+                //-     th(scope='row') 1
+                //-     td Mark
+                //-     td Otto
+                //-     td Otto
+                //-     td
+                //-         button.btn.btn-primary(type='button' data-type="edit" data-role="page") 編輯
+                //-     td
+                //-         button.btn.btn-danger(type='button' data-type="delete") 刪除
+                
+                if(news)
+                    each newsElement,index in news
+                        tr
+                            th(scope='row') #{index+1}
+                            td=newsElement.news_title
+                            td=newsElement.news_content
+                            td.news_img
+                                img(src=newsElement.news_img)
+                            td
+                                button.btn.btn-primary(type='button' data-type="edit" data-role="page") 編輯
+                            td.news_delete
+                                button.btn.btn-danger(type='button' data-type="delete") 刪除
         form(action="/news" method="post" enctype="multipart/form-data")
             table.table.table-hover.table-striped.cms_edit
                 thead
