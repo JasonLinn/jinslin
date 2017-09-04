@@ -4,8 +4,91 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
+        link(href="plugin/bxslider/jquery.bxslider.min.css", rel="stylesheet")
         link(href="css/main.css", rel="stylesheet")
         
     body
-        h1 index123333dsfd545f
+      #page-index
+        .greetbox
+          .logo
+            img(src="/images/logo-o.png" class="rwd-img")
+          h1.title 
+            span 溫馨服務情
+            span 窩心衿日林
+          .gobtn 
+            a(href="about") 進入網站
+          .iconbox
+            ul
+              li
+                a
+                  .icon
+                    img(src="images/icon/lodging.png" class="rwd-img")
+                  .name 宜蘭縣民宿0070號
+              li
+                a
+                  .icon
+                    img(src="images/icon/countrycard.png" class="rwd-img")
+                  .name 國民旅遊卡特約民宿
+              li
+                a
+                  .icon
+                    img(src="images/icon/facebook.png" class="rwd-img")
+                  .name 衿日林粉絲專頁
+          .bottom
+            .contact
+              span 訂房專線：03-9500236
+              span 行動：0928-073438
+              span 張小姐
+            .address
+              span 地址：宜蘭縣冬山鄉武淵村(三)路116號
+              span 傳真：03-9509677
+        .sliderbox
+          ul#bannerSlider
+            li
+              img(src="images/slider/slider1.jpg" class="rwd-img")
+            li
+              img(src="images/slider/slider2.jpg" class="rwd-img")
+            li
+              img(src="images/slider/slider3.jpg" class="rwd-img")
+            li
+              img(src="images/slider/slider4.jpg" class="rwd-img")
+            li
+              img(src="images/slider/slider5.jpg" class="rwd-img")
+        .newsbox
+          .title 最新消息
+          .contentbox
+            ul#newsListBox
+              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
+              li 綠行動傳唱計劃開跑囉！自備盥洗用具，每房折抵200元 2017-04-20
+              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
+              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
+              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
+              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
+        footer 
+          .contact
+            span 訂房專線：03-9500236
+            span 行動：0928-073438
+            span 張小姐
+          .address
+            span 地址：宜蘭縣冬山鄉武淵村(三)路116號
+            span 傳真：03-9509677
+        
 script(src="/reload/reload.js")
+script(src="jquery/dist/jquery.js")
+script(src="plugin/bxslider/jquery.bxslider.min.js")
+script(src="js/layout.js")
+script.
+  
+  if($(window).width() < 641){
+    $('.logo img').attr('src','/images/logo-s.png');
+    $('.gobtn a').addClass('whitearrow');
+  }
+  
+  
+  $('#bannerSlider').bxSlider({
+    mode:'fade',
+    controls:false,
+    pager:false,
+    auto:true,
+    touchEnabled:false
+  });

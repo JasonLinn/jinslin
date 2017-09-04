@@ -1,0 +1,80 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(href="plugin/fontawesome/css/font-awesome.min.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+        
+    body
+      include ./components/header.pug
+      #page-attractions
+        .bannerbox
+          h1.title 
+            span 溫馨服務情
+            span 窩心衿日林
+        .maincontent
+          .titlebox
+            .combo
+              h2 
+                span 鄰近景點
+              .desc
+                span 衿日林優質鄉村民宿
+                span 比鄰冬山河畔，親水公園正對面
+                span 除此之外宜蘭還有非常多景點值得一去再去
+          .pointlistbox
+            .container
+              ul#pointList
+                li
+                  .pic
+                  .text
+                    h3.title 親水公園
+                    p.content 在冬山河親水公園從超大型的龍舟競賽．西式划船，到家庭親子的休閒知性之旅，都令你流連忘返．暢意而歸。自1996 年起的每年暑假於親水公園舉辦的『宜蘭國際童玩藝術節』，有來自各國的表演團體演出，還有大型的水上活動，千萬別錯過哦！
+                li
+                  .pic
+                  .text
+                    h3.title 利澤簡橋
+                    p.content 台七丙線利澤簡橋原橋名為捷徑橋，昔日宜蘭縣五結鄉利澤村通往羅東鎮，因冬山河阻隔，需遠繞其他道路通行民眾出入不便，經闢建乙座混凝土橋後，縮短民眾交通上之距離，故得名「捷徑橋」。   
+                li
+                  .pic
+                  .text
+                    h3.title 冬山河自行車道
+                    p.content 冬山火車站至冬山河利澤簡橋段，全長五點六公里，沿著冬山河兩岸都有自行車專用道，如果是夏天，還可以到親水公園戲水， 一路風光明媚，讓您暢遊鄉間田野。
+                li
+                  .pic
+                  .text   
+                    h3.title 國立傳統藝術中心
+                    p.content 民國八十五年三月成立國立傳統藝術中心籌備處，傾力推動傳統藝術的維護與研究，並展開保存、傳習、展演及推廣等工作，目標為帶動民間藝術的再生、發展與創新。
+                li
+                  .pic
+                  .text
+                    h3.title 羅東運動公園
+                    p.content 當初規劃羅東運動公園的休閒哲學，在於使人親近自然，能夠仰望藍天白雲，能夠赤足草地，飽嗅泥土芳香，也可以在粼粼波光中，感受到天光雲影共徘徊的感覺；尤其是浸身於各門設備完善的運動設施中，更有一種受到自然擁抱的幸福感！
+                li
+                  .pic
+                  .text
+                    h3.title 羅東觀光夜市
+                    p.content 極具人情味的羅東觀光夜市有許多傳統美食小吃，從日頭西晒開始，燈便通夜亮麗明晃，熙來攘往的人群，自四面八方攢聚而來。來到宜蘭記得來品嚐。
+                li
+                  .pic
+                  .text
+                    h3.title 武荖坑風景區
+                    p.content 現己規劃成烤肉區及露營區，除此之外其間溪水平緩，水位不深，很適合戲水、抓蝦、泛舟等活動，宜蘭縣政府每年都會定期在此舉辦『宜蘭縣綠色博覽會』，傳播綠色概念、傳遞自然生態、能源、生物科技與環保精神。
+                li
+                  .pic
+                  .text
+                    h3.title 玉蘭茶園
+                    p.content 玉蘭面向蘭陽溪開闊河谷，北依南拳頭母山，茶園連綿，鄰近高山環伺，本區隸屬雪山山脈東隅常起輕霧，適合茶樹生長，主要為青心烏龍，金萱、翠玉，茶色墨綠，茶湯金黃亮麗，香氣濃郁，滋味甘醇甜美，令人回味無窮，因產地「玉蘭」而名為「玉蘭茶」。 
+                li
+                  .pic
+                  .text
+                    h3.title 清水地熱
+                    p.content 清水地熱位於大同鄉清水村南側的清水溪谷中。遠處的青山加上地熱噴出裊裊白煙，構成一幅頗為動人的鄉土風情畫。地熱泉源由地下冒出，水量甚豐，屬鹼性泉，泉溫高達攝氏95度，泉質微黃而略帶硫磺味，呈滾騰狀。
+
+      include ./components/footer.pug
+        
+        
+script(src="/reload/reload.js")
+script(src="jquery/dist/jquery.js")
+script(src="js/layout.js")

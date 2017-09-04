@@ -1,0 +1,93 @@
+#page-traffic {
+  background-image: url('../images/contents_bg.png');
+
+  .bannerbox {
+    background-image: url('../images/banner/trafficbanner.jpg');
+  }
+
+  .maincontent {
+    padding: 20px 0 50px;
+
+    h2 {
+      text-align: center;
+      padding: 50px 0;
+
+      span {
+        position: relative;
+        padding: 10px 0;
+        font-size: 1.6rem;
+        font-weight: 300;
+      }
+
+      span:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        margin: 0 auto;
+        border-bottom: 1px solid $grey;
+      }
+    }
+    //h2
+    .address{
+      text-align: center;
+      line-height: 1.5em;
+      margin-bottom: 30px;
+      span{
+        display: block;
+        padding: 5px 0;
+      }
+    }
+ 
+    .trafficbox{
+      #mapBox{
+        width: 60%;
+        height: 50vh;
+      }
+      .boxitem{
+        width: 60%;
+        margin: 50px auto;
+      }
+    }
+
+    .trafficinfo{
+      padding: 30px;
+      background-color: rgba($white,0.7);
+      li{
+        margin-bottom: 15px;
+        .title{
+          color: $deepblue;
+          padding: 10px 0;
+        }
+        .content{
+          padding-left: 1rem;
+          line-height: 1.5em;
+        }
+      }
+    }
+
+  }
+  //maincontent
+  @media (max-width: 640px){
+    .maincontent{
+      .trafficbox{
+        #mapBox{
+        width: 100%;
+        height: 50vh;
+      }
+        .colorMap{
+          width: 100%;
+        }
+        .trafficinfo{
+          width: 95%;
+          padding: 30px 20px;
+          li .title{
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
