@@ -1,0 +1,120 @@
+#page-attractions {
+    background-image: url('../images/contents_bg.png');
+    .bannerbox {
+        background-image: url('../images/banner/attractionsbanner.jpg');
+    }
+    .maincontent {
+        padding: 20px 0 50px;
+        .titlebox {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 50vh;
+            margin: 30px auto;
+            background-image: url('../images/yilan.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+        }
+        h2 {
+            text-align: center;
+            padding: 50px 0;
+            span {
+                position: relative;
+                padding: 10px 0;
+                font-size: 1.6rem;
+                font-weight: 300;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 60%;
+                    margin: 0 auto;
+                    border-bottom: 1px solid $grey;
+                }
+            }
+        }
+        .desc {
+            text-align: center;
+            line-height: 1.5em;
+            span {
+                display: block;
+                padding: 5px 0;
+                font-size: 1.1rem;
+            }
+        }
+        #pointList {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 31.333%;
+                margin: 2% 1%;
+                background-color: rgba($white, 0.7);
+                .pic {
+                    padding-bottom: 70%;
+                    background-size: cover;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    border: 5px solid $white;
+                    box-shadow: 1px 0px 8px $deepgrey;
+                }
+                &:nth-of-type(1) .pic {
+                    background-image: url('../images/attractions/01.png');
+                }
+                &:nth-of-type(2) .pic {
+                    background-image: url('../images/attractions/02.png');
+                }
+                &:nth-of-type(3) .pic {
+                    background-image: url('../images/attractions/03.png');
+                }
+                &:nth-of-type(4) .pic {
+                    background-image: url('../images/attractions/04.png');
+                }
+                &:nth-of-type(5) .pic {
+                    background-image: url('../images/attractions/05.png');
+                }
+                &:nth-of-type(6) .pic {
+                    background-image: url('../images/attractions/06.png');
+                }
+                &:nth-of-type(7) .pic {
+                    background-image: url('../images/attractions/07.png');
+                }
+                &:nth-of-type(8) .pic {
+                    background-image: url('../images/attractions/08.png');
+                }
+                &:nth-of-type(9) .pic {
+                    background-image: url('../images/attractions/09.png');
+                }
+            }
+            .text {
+                padding: 10px;
+                .title {
+                    font-size: 1.3rem;
+                    padding: 10px 0;
+                }
+                .content {
+                    text-align: justify;
+                    line-height: 1.5em;
+                }
+            }
+        }
+    } //maincontent
+    @media (max-width: 640px) {
+        .maincontent {
+            #pointList {
+                display: block;
+                li {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    .text {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+} //page-traffic

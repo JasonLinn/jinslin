@@ -1,0 +1,247 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(href="plugin/bxslider/jquery.bxslider.min.css", rel="stylesheet")
+        link(href="plugin/fontawesome/css/font-awesome.min.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+        
+    body
+      include ./components/header.pug
+      #page-rooms
+        .bannerbox
+          h1.title 
+            span 溫馨服務情
+            span 窩心衿日林
+        .maincontent
+          h2 
+            span 精緻客房
+          .contact
+            span 訂房專線：0928-073438(中華) 0982-048-863(亞太)
+            span 傳真：03-9509677 張小姐
+            span 地址：宜蘭縣冬山鄉武淵村(三)路116號
+            span 團體或多日定房另享有優惠！
+          .roomlistbox
+            #sliderNext
+              i.fa.fa-chevron-right(aria-hidden="true")
+            #sliderPrev
+              i.fa.fa-chevron-left(aria-hidden="true")
+            ul#roomList
+              li.roomitem.active
+                .pic(style="background-image:url('images/attractions/01.png')")
+                .text
+                  h3.title 渡假甜蜜雙人房
+                  .content 
+                    ul.pricelist
+                      li.priceitem 定價  3,500
+                      li.priceitem 假日  3,000
+                      li.priceitem 平日  2,300
+                    span.price 週日、週五：2,300元
+                    span 加人每人600
+                    span 房內設施：獨立陽台、有線 (無) 線
+                    span ADSL寬頻上網 (請自備電腦)、獨立
+                    span 筒床、電視、冷暖氣機、盥洗
+              li.roomitem
+                .pic(style="background-image:url('images/attractions/02.png')")
+                .text
+                  h3.title 渡假甜蜜雙人房
+                  .content 
+                    ul.pricelist
+                      li.priceitem 定價  3,500
+                      li.priceitem 假日  3,000
+                      li.priceitem 平日  2,300
+                    span.price 週日、週五：2,300元
+                    span 加人每人600
+                    span 房內設施：獨立陽台、有線 (無) 線
+                    span ADSL寬頻上網 (請自備電腦)、獨立
+                    span 筒床、電視、冷暖氣機、盥洗
+              li.roomitem
+                .pic(style="background-image:url('images/attractions/03.png')")
+                .text
+                  h3.title 渡假甜蜜雙人房
+                  .content 
+                    ul.pricelist
+                      li.priceitem 定價  3,500
+                      li.priceitem 假日  3,000
+                      li.priceitem 平日  2,300
+                    span.price 週日、週五：2,300元
+                    span 加人每人600
+                    span 房內設施：獨立陽台、有線 (無) 線
+                    span ADSL寬頻上網 (請自備電腦)、獨立
+                    span 筒床、電視、冷暖氣機、盥洗
+            //- ul.pager
+            //-   li
+            //-   li.active
+            //-   li
+            //-   li
+          h2 
+            span 貼心服務  
+          .servicelistbox
+            .container
+              ul.servicelist
+                li
+                  .icon
+                    img(src="images/icon/icon-service-1.png" class="rwd-img")
+                  .text 
+                    span 住宿免費供應早餐
+                    span 讓你有個美好的早晨
+                li
+                  .icon
+                    img(src="images/icon/icon-service-2.png" class="rwd-img")
+                  .text 
+                    span 設施提供：
+                    span 洗衣、涼衣的場所
+                li
+                  .icon
+                    img(src="images/icon/icon-service-3.png" class="rwd-img")
+                  .text 
+                    span 免費提供自行車
+                    span 暢遊鄉間小道
+                li
+                  .icon
+                    img(src="images/icon/icon-service-4.png" class="rwd-img")
+                  .text 
+                    span 附設泡茶區
+                    span 免費提供茶葉
+                li
+                  .icon
+                    img(src="images/icon/icon-service-5.png" class="rwd-img")
+                  .text 
+                    span 代客安排旅遊規畫
+                    span 及導覽解說服務
+                li
+                  .icon
+                    img(src="images/icon/icon-service-6.png" class="rwd-img")
+                  .text 
+                    span 附設大型
+                    span 免費停車場
+          .infobox
+            ul
+              li.info.info1
+                .container
+                  h3.title.deepblue 匯款資訊
+                    span
+                      i.fa.fa-chevron-right(aria-hidden="true")
+                  .content
+                    .top
+                      span 先以電話預約房間。(訂房請於一日內預付五成訂金，春節期間，訂金需預付全額，如未付訂金恕不予保留客房)
+                      span 匯款後務必來電 0928-073438 確認是否收到訂金，並告知匯款帳號末五碼及確認住房的日期及房型。
+                      span 延期須知(住宿10天前):第一次可延三個月，第二次一個月， 第三次退訂金10%不保留房間。
+                    .bottom
+                      .left
+                        ul
+                          li 匯款戶名：張麗貞
+                          li 匯款代號：700
+                          li 匯款局號：0111061
+                          li 匯款帳號：0099453
+                          li &nbsp  
+                          li 劃撥帳號：19479682　
+                          li 劃撥戶名：林世明
+                      .right
+                        ul
+                          li.name NAME：LIN SHIH MING
+                          li.name 戶名：林世明
+                          li.account A/C：228-53-02230-8 
+                          li.account 帳號：228-53-02230-8
+                          li BANK 兆豐國際商業銀行 羅東分行
+                          li NAME：MEGA INTERNATIONAL COMMERCIAL BANK CO.,LTD　LOTUNG BRANCH
+                          li ADD：195,SEC 2 CHWEN JING ROAD LOTUNG 26541,I-LAN,TAIWAN
+                          li SWIFT：ICBCTWTP228
+                          li MOBILE：+886-932-090483
+              li.info.info2
+                .container
+                  h3.title.orange 注意事項
+                    span
+                      i.fa.fa-chevron-right(aria-hidden="true")
+                  .content
+                    .top
+                      ul.noticelist
+                        li
+                          span check in：PM 3：00以後
+                          span check out：AM 10：30以前
+                        li
+                          span 定價：農曆春節期間
+                          span 平日：週日 ～ 週五
+                          span 假日：週六、國定連續假日
+                        li
+                          span 預約訂房：
+                          span 請先付訂金－每房1000元，加床，每人600元
+                          span 煩請於入住日當天下午17：00以前來電確認。
+                    .bottom
+                      .left
+                        ul
+                          li 為了住宿品質，請依房型人數入住，請勿擅自加人。
+                          li 住宿請出示證件辦理登記，同時繳交住宿費用。
+                          li 進房時間，如未告知者房間將順讓他人。
+                          li 未來電確認者，逐行取消訂金，順讓他人。
+                          li 團體或多日訂房另享有優惠！
+                      .right
+                        ul
+                          li 請隨手將房門上鎖，貴重物品請自行保管。
+                          li 房間內禁止吸菸及炊煮食物。
+                          li 為維護住宿品質，禁止攜帶寵物入住。 
+                          li 如攜帶寵物則本民宿有權拒絕該房客入住，不便之處敬請見諒！
+                          li 房內禁止嚼食檳榔及喝酒。
+              li.info.info3
+                .container
+                  h3.title 退房事項
+                    span
+                      i.fa.fa-chevron-right(aria-hidden="true")
+                  .content
+                    ul.notice
+                      li
+                        .listtitle 退房：
+                        .text 
+                          span 請於住宿日一週前告知，逾期房間無人候補者，訂金則不予退還。
+                          span 如該房間有人候補成功者，可退還訂金，退房手續費房價一成。
+                      li
+                        .listtitle 延期：
+                        .text 
+                          span 請於原住宿日七天前告知，將延期或保留訂金三個月，逾期房間無人候補者，訂金則不予退還或保留。
+                          span 如該房間有人候補成功者，可退還訂金，退房手續費房價一成。
+                      li 包館退房或延期則須在一個月之前提出，逾期房間無人候補者，訂金則不予退還或保留。
+                      li 出發前如遇天災或不可抗拒之因素，且經官方發佈，因而無法成行時，可延期或保留訂金三個月。
+      include ./components/footer.pug
+        
+        
+script(src="/reload/reload.js")
+script(src="jquery/dist/jquery.js")
+script(src="plugin/bxslider/jquery.bxslider.min.js")
+script(src="js/layout.js")
+script.
+  $(function (){
+    var window_W = $(window).width();
+    var sliderW = $('#roomList li').width();
+    
+    if(window_W < 641){
+      var sliderMargin = 30;
+    }else{
+       var sliderMargin = window_W * 0.2 / 2; 
+    }
+    //一個slider佔畫面 40% ,margin20%
+   
+    var roomSlider = $('#roomList').bxSlider({
+      //- pager:false,
+      controls:false,
+      touchEnabled:false,
+      infiniteLoop:true,
+      slideWidth: sliderW,
+      slideMargin: sliderMargin,
+      onSlideBefore:function($slideElement, oldIndex, newIndex){ 
+        $slideElement.addClass('active').siblings().removeClass('active');
+      }
+    });
+
+      $('.bx-viewport').css('overflow','visible');
+
+
+    
+    $('#sliderNext').click(function(){
+      roomSlider.goToNextSlide();
+    })
+    $('#sliderPrev').click(function(){
+      roomSlider.goToPrevSlide();
+    })
+  })

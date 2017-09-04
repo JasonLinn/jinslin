@@ -1,0 +1,72 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(href="plugin/fontawesome/css/font-awesome.min.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+        
+    body
+      include ./components/header.pug
+      #page-traffic
+        .bannerbox
+          h1.title 
+            span 溫馨服務情
+            span 窩心衿日林
+        .maincontent
+          h2 
+            span 交通資訊
+          .address
+            span 宜蘭縣冬山鄉武淵村(三)路116號
+            span GPS   	E 121 ° 48' 43.3”　 N 24 ° 40' 16.4”
+          .trafficbox
+            .container
+              #mapBox.boxitem
+              .colorMap.boxitem
+                .pic
+                  img(src="images/map.png" alt="" class="rwd-img")
+              .trafficinfo.boxitem
+                ul
+                  li
+                    .title 國道五號，高速公路
+                    .content 
+                      span 台北 → 國道五號高速公路 → 羅東交流道下來直行 → 左轉台七丙省道 → 衿日林民宿
+                  li
+                    .title 開車 由北往南
+                    .content
+                      span 台北 → 濱海公路（往蘇澳方向）→ 台七丙省道 → 衿日林民宿( 親水公園正對面 )
+                      span 由台北出發：經濱海公路 (台二線)，往蘇澳方向前進，( 右彎) 進入親河路(台七線)省道，通過冬山河利澤簡橋下坡50公尺左邊，即可看到衿日林鄉村別墅及右邊冬山河親水公園正門口。
+                  li
+                    .title 開車 由南往北
+                    .content
+                      span 花蓮 → 濱海公路（往基隆、台北方向）→ 台七丙省道 → 衿日林民宿( 親水公園正對面 )
+                      span 由花蓮出發：經濱海公路 (台二線)，往基隆、台北方向前進，(左彎) 進入親河路 (台七線)省道，通過冬山河利澤簡橋下坡50公尺左邊，即可看到衿日林鄉村別墅及右邊冬山河親水公園正門口。
+                  li
+                    .title 搭公車
+                    .content
+                      span 羅東轉運站下車，搭乘241或台灣好行冬山河線，親水公園站，衿日林民宿（親水公園正對面）
+                  li
+                    .title 搭火車
+                    .content
+                      span 請在羅東火車站 (後站) 下車，您可搭計程車或到機車小站租機車，再前往親河路往冬山河親水公園方向，到達親水公園正門口紅綠燈下，再往前50公尺處 (右邊)，就可以看到衿日林民宿。
+      include ./components/footer.pug
+        
+        
+script(src="/reload/reload.js")
+script(src="jquery/dist/jquery.js")
+script(src="js/layout.js")
+script.
+   function initMap() {
+        var jinrilin = {lat: 24.6712372, lng: 121.8095452};
+        var map = new google.maps.Map(document.getElementById('mapBox'), {
+          zoom: 16,
+          center: jinrilin
+        });
+        var marker = new google.maps.Marker({
+          position: jinrilin,
+          map: map
+        });
+      }
+script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzfll3TxM0WvyrdZ22RoiM8r3EzDmysFE&callback=initMap")
+  

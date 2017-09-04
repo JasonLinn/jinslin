@@ -1,0 +1,35 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        include ./components/header.pug
+        title Document
+        body
+            
+            nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+                .container
+                    button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    a.navbar-brand(href='#') JinRiLin衿日林
+                    #navbarNavDropdown.collapse.navbar-collapse
+                        ul.navbar-nav
+                            li.nav-item.active
+                                a.nav-link(href='/cms_news')
+                                    | 最新消息
+                                span.sr-only (current)
+                            li.nav-item
+                                a.nav-link(href='#') 房間管理
+                            li.nav-item
+                                a.nav-link(href='#') Pricing
+                            //- li.nav-item.dropdown
+                            //-     a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            //-         | Dropdown link
+                            //-         .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            //-             a.dropdown-item(href='#') Action
+                            //-             a.dropdown-item(href='#') Another action
+                            //-             a.dropdown-item(href='#') Something else here
+            block content
+        
+
+include ./components/footer.pug
