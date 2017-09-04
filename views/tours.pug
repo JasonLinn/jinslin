@@ -1,0 +1,80 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(href="plugin/fontawesome/css/font-awesome.min.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+        
+    body
+      include ./components/header.pug
+      #page-tours
+        .bannerbox
+          h1.title 
+            span 溫馨服務情
+            span 窩心衿日林
+        .maincontent
+          h2 
+            span 套裝行程
+          .noticebox
+            .container
+              ul.notice
+                li
+                  .title ◎ 貼心叮嚀
+                  .text
+                    span 1. 童玩諸多玩水設施建議您攜帶泳衣泳帽等玩水配備。
+                    span 2. 若會暈船的朋友，提醒您攜帶昏船藥。
+                    span 3. 船班出船時間 (9:00、12:30) ，登船處為「頭城烏石港」。
+                    span 4. 孩童身高110公分 (含) 算成人價，孩童 110 公分以下酌收被套用品服務費300元。
+                li
+                  .title ◎ 預約方式
+                  .text 參加以上套裝行程，請電話連絡確認，並請匯付全額款項，請將收據傳真(03-9509677) 註明姓名、住宿日期、人數，確認訂房成功。其它事項請參閱衿日林網頁介紹及客房介紹內容。
+          ul#toursListBox
+            li
+              .container
+                .pic
+                  img(src="images/demo/demo2.png" class="rwd-img")
+                .text
+                  .title 溫泉館冬之戀之旅
+                  .contentbox
+                    .item
+                      .contenttitle 方案內容
+                      .content 住宿+賞鯨繞島船票+衿日林庭園咖啡中、西式自助早餐+香醇現煮咖啡or飲料+免費單車暢遊冬山河畔。
+                    .item.item2
+                      .contenttitle 優惠價
+                      .content 
+                        span 迷你雙人套房平日/每人1399元 假日/每人1599元
+                        span 英式或印度風雙人房 平日/每人1550元 假日/每人1950元
+                        span 渡假蜜月雙人房 平日/每人1680元 假日/每人1990元
+                        span 溫馨親子四人房 平日/每人1350元 假日/每人1590元
+                        span 迎賓花嫁四人房 平日/每人1450元 假日/每人1650元
+                            span 巧巧四人房 平日/每人1280元 假日/每人14.....
+                  .morebtn 詳細介紹
+            li
+              .container
+                .pic
+                  img(src="images/demo/demo3.png" class="rwd-img")
+                .text
+                  .title 溫泉館冬之戀之旅
+                  .contentbox
+                    .item
+                      .contenttitle 方案內容
+                      .content 住宿+賞鯨繞島船票+衿日林庭園咖啡中、西式自助早餐+香醇現煮咖啡or飲料+免費單車暢遊冬山河畔。
+                    .item.item2
+                      .contenttitle 優惠價
+                      .content 
+                        span 迷你雙人套房平日/每人1399元 假日/每人1599元
+                        span 英式或印度風雙人房 平日/每人1550元 假日/每人1950元
+                        span 渡假蜜月雙人房 平日/每人1680元 假日/每人1990元
+                        span 溫馨親子四人房 平日/每人1350元 假日/每人1590元
+                        span 迎賓花嫁四人房 平日/每人1450元 假日/每人1650元
+                        span 巧巧四人房 平日/每人1280元 假日/每人14.....
+                  .morebtn 詳細介紹
+
+      include ./components/footer.pug
+        
+        
+script(src="/reload/reload.js")
+script(src="jquery/dist/jquery.js")
+script(src="js/layout.js")
