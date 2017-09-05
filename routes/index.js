@@ -7,5 +7,6 @@ module.exports = function (app) {
     app.get('/attractions',function (req,res) {res.render('attractions')})
     app.get('/news',function (req,res) {res.render('news')})
     app.use('/login',require('./login'));
+    app.use('/signup',require('./signup'));
     app.use('/cms_news',require('./news'));
 }

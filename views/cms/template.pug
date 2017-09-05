@@ -22,6 +22,9 @@ html(lang="en")
                                 a.nav-link(href='#') 房間管理
                             li.nav-item
                                 a.nav-link(href='#') Pricing
+                            if(admin)
+                                li.nav-item
+                                    a.nav-link(href='#') 歡迎您： #{admin.admin_acc}
                             //- li.nav-item.dropdown
                             //-     a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                             //-         | Dropdown link
