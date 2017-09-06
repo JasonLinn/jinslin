@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const sha1 = require('sha1');
 /**
  * model
  */
@@ -25,7 +25,16 @@ router.post('/',function (req,res,next) {
         .then(function (admin) {
             if(!admin){
                 console.log(`not found admin`)
-            }else{
+                // console.log(sha1(admin_psw) ,admin.admin_psw)
+            }
+            else if (sha1(admin_psw) !== admin.admin_psw){
+                // 检查密码是否匹配
+                // req.flash('error', '用户名或密码错误');
+                console.log(`密碼錯誤`)
+                return res.redirect('back');
+            }
+            else{
+                console.log(admin_psw)
                 console.log(admin)
                 delete admin.admin_psw; //在session刪除密碼
                 req.session.admin = admin;

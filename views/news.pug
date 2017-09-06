@@ -18,18 +18,14 @@ html(lang="en")
           h2 
             span 最新消息
           ul#newsListBox
-            li
-              .container
-                .title [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張
-                .date 發佈日期： 2017-07-12
-                .text 即日起預訂住宿，每房即贈送 『2017宜蘭國際童玩藝術節平日券』兩張，這麼有禮，還不趕快拿起電話預約！ 訂房專線：03-9500236、0928...
-                .morebtn 查看更多
-            li
-              .container
-                .title [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張
-                .date 發佈日期： 2017-07-12
-                .text 即日起預訂住宿，每房即贈送 『2017宜蘭國際童玩藝術節平日券』兩張，這麼有禮，還不趕快拿起電話預約！ 訂房專線：03-9500236、0928...
-                .morebtn 查看更多
+            if(news)
+              each newsElement,index in news
+                li
+                  .container
+                    .title=newsElement.news_title
+                    .date 發佈日期： 2017-07-12
+                    .text=newsElement.news_content
+                    .morebtn 查看更多
       #popNewsDetail
         .popbg
         .popcontent
