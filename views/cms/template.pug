@@ -13,18 +13,19 @@ html(lang="en")
                         span.navbar-toggler-icon
                     a.navbar-brand(href='#') JinRiLin衿日林
                     #navbarNavDropdown.collapse.navbar-collapse
-                        ul.navbar-nav
-                            li.nav-item.active
+                        ul.navbar-nav.d-flex.justify-content-start
+                            li.nav-item.active.p-2
                                 a.nav-link(href='/cms_news')
                                     | 最新消息
                                 span.sr-only (current)
-                            li.nav-item
+                            li.nav-item.p-2
                                 a.nav-link(href='#') 房間管理
-                            li.nav-item
+                            li.nav-item.p-2
                                 a.nav-link(href='#') Pricing
-                            if(admin)
-                                li.nav-item
-                                    a.nav-link(href='#') 歡迎您： #{admin.admin_acc}
+                        if(admin)
+                            .ml-auto.p-2
+                                span 歡迎您： #{admin.admin_acc}
+                                a(href='/signout').d-inline-block.p-2 登出
                             //- li.nav-item.dropdown
                             //-     a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                             //-         | Dropdown link

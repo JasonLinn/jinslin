@@ -21,12 +21,14 @@ router.post('/',function (req,res,next) {
     var admin_psw = req.body.admin_psw;
 
     console.log(admin_acc,admin_psw)
-    AdminModel.getUserByName(name)
+    AdminModel.getUserByName(admin_acc)
         .then(function (admin) {
             if(!admin){
                 console.log(`not found admin`)
             }else{
                 console.log(admin)
+                delete admin.admin_psw; //在session刪除密碼
+                req.session.admin = admin;
                 res.redirect('/cms_news');
             }
 

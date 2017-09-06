@@ -37,9 +37,9 @@ block content
                             td
                                 button.btn.btn-primary.news_btn_update(type='button' data-type="edit" data-id=newsElement._id value=index) 編輯
                             td.news_delete
-                                a(href="news/"+newsElement._id+"/remove", title="title") 
+                                a(href="cms_news/"+newsElement._id+"/remove", title="title") 
                                     button.btn.btn-danger(type='button' data-type="delete") 刪除
-        form.news_update_form(action="/news" method="post" enctype="multipart/form-data")
+        form.news_update_form(action="/cms_news" method="post" enctype="multipart/form-data")
             table.table.table-hover.table-striped.cms_edit
                 thead
                     tr

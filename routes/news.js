@@ -6,6 +6,8 @@ const config = require('config-lite')(__dirname);
 const mongoose = require('mongoose');
 const multer = require('multer')
 
+const checkLogin = require('../middlewares/check').checkLogin;
+
 var storage = multer.diskStorage({
   destination: function (request, file, callback) {
     callback(null, './public/upload/');
@@ -63,7 +65,7 @@ var Newsqq = mongoose.model('newsqq',newsSchema);
 // console.log(Admin);
 
 
-router.get('/', function (req, res, next) {
+router.get('/',checkLogin, function (req, res, next) {
     var aa=function (res){
         // console.log(res, 'dataaaa#@@@@@@@@@@@@@@@@@@@@@@@@');
     }
@@ -80,7 +82,7 @@ router.get('/', function (req, res, next) {
     
 })
 
-router.post('/',upload.single('news_img'),function (req,res,next){
+router.post('/',checkLogin,upload.single('news_img'),function (req,res,next){
     console.log(req.body.news_title)
     console.log(req.body.news_content)
     // console.log(req.body.news_img)
@@ -97,7 +99,7 @@ router.post('/',upload.single('news_img'),function (req,res,next){
             console.log('save success');
         }
     })
-    res.redirect('/news')
+    res.redirect('/cms_news')
 })
 router.post('/:postId/update',upload.single('news_img'),function (req,res,next){
     console.log(req.body.news_title)
@@ -124,7 +126,7 @@ router.post('/:postId/update',upload.single('news_img'),function (req,res,next){
             console.log('save success');
         }
     })
-    res.redirect('/news')
+    res.redirect('/cms_news')
 })
 router.get('/:postId/remove',function (req,res,next){
     // console.log(req)
@@ -137,7 +139,7 @@ router.get('/:postId/remove',function (req,res,next){
             console.log('delete success');
         }
     })
-    res.redirect('/news')
+    res.redirect('/cms_news')
 })
 
 module.exports = router;

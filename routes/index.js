@@ -8,5 +8,6 @@ module.exports = function (app) {
     app.get('/news',function (req,res) {res.render('news')})
     app.use('/login',require('./login'));
     app.use('/signup',require('./signup'));
+    app.use('/signout',require('./signout'));
     app.use('/cms_news',require('./news'));
 }

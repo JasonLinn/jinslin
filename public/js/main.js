@@ -10,7 +10,7 @@ $(function (){
         $(".news_update_title input").val(title);
         $(".news_update_content textarea").val(content);
         $(".news_update_img img").attr("src",imgUrl);
-        $(".news_update_form").attr("action","/news/"+actionUrl+"/update")
+        $(".news_update_form").attr("action","/cms_news/"+actionUrl+"/update")
         
         console.log(title,content,imgUrl)
         $('.cms_table').hide();
@@ -23,7 +23,7 @@ $(function (){
         }
     })
     $(".news_btn_create").on('click',function () {
-        $(".news_update_form").attr("action","/news");
+        $(".news_update_form").attr("action","/cms_news");
         $(".news_update_img img").hide();
         $('.cms_table').hide();
         $('.cms_edit').show();
