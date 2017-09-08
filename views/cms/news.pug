@@ -39,14 +39,18 @@ block content
                             td.news_delete
                                 a(href="cms_news/"+newsElement._id+"/remove", title="title") 
                                     button.btn.btn-danger(type='button' data-type="delete") 刪除
-        if(news)
+        if(news && news[0])
             form.news_update_form(action="/cms_news" method="post" enctype="multipart/form-data")
                 table.table.table-hover.table-striped.cms_edit
                     thead
                         tr
                             th.text-centeralign-middle 標題
                             td.news_update_title 
-                                input(type="text" name="news_title" value=news[0].news_title)
+                                input(type="text" name="news_title")
+                        //- tr
+                        //-     th.text-centeralign-middle 發文日期
+                        //-     td.news_update_content
+                        //-         input(type="date")
                         tr
                             th.text-centeralign-middle.align-middle 內容
                             td.news_update_content

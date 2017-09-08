@@ -39,6 +39,7 @@ const { Schema } = mongoose;
 
 const newsSchema = new mongoose.Schema({
     news_title:String,
+    news_date:Date,
     news_content:String,
     news_img:String
 })
@@ -89,6 +90,7 @@ router.post('/',checkLogin,upload.single('news_img'),function (req,res,next){
     console.log(req.file.path)
     var newsff = new Newsdd({
         news_title:req.body.news_title,
+        news_date:new Date(),
         news_content:req.body.news_content,
         news_img:req.file.path.slice(6)
     })

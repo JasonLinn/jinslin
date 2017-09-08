@@ -43,6 +43,7 @@ app.use(session({
     },
     store: new MongoStore({// 将 session 存储到 mongodb
       url: 'mongodb://jinrilin:jinrilin@ds133428.mlab.com:33428/heroku_ptmdcjqm'// mongodb 地址
+      // url: 'mongodb://localhost:27017/mymondb'// mongodb 地址
     })
   }));
 

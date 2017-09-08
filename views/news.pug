@@ -23,8 +23,9 @@ html(lang="en")
                 li
                   .container
                     .title=newsElement.news_title
-                    .date 發佈日期： 2017-07-12
+                    .date 發佈日期： #{moment(newsElement.news_date).format("YYYY-MM-DD")}
                     .text=newsElement.news_content
+                    input(type="hidden" value=newsElement.news_img).news_img
                     .morebtn 查看更多
       #popNewsDetail
         .popbg

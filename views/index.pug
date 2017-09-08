@@ -58,12 +58,9 @@ html(lang="en")
           .title 最新消息
           .contentbox
             ul#newsListBox
-              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
-              li 綠行動傳唱計劃開跑囉！自備盥洗用具，每房折抵200元 2017-04-20
-              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
-              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
-              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
-              li [住房優惠]即日起預訂住宿每房送2017童玩節平日券2張 2017-07-12
+              if(news)
+                each newsElement,index in news
+                  li #{newsElement.news_title} #{moment(newsElement.news_date).format("YYYY-MM-DD")}
         footer 
           .contact
             span 訂房專線：03-9500236
