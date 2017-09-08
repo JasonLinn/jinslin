@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        script(src="./jquery/dist/jquery.js")
+        include ./components/header.pug
+        
+        
+        title Document
+        body
+            .container
+                .row
+                    .col-md-6.col-md-push-3
+                        form.form(action="/signup" method="post")
+                            .form-group.text-center 管理員註冊
+                                .text-center.form-group.control-label
+                                    label 帳號：
+                                    input(type="text" name="admin_acc")
+                                .text-center
+                                    label 密碼：
+                                    input(type="password" name="admin_psw")
+                            .text-center
+                                button(type="submin").btn.btn-block.btn-success 註冊
+include ./components/footer.pug
+
+        

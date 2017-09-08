@@ -37,29 +37,34 @@ block content
                             td
                                 button.btn.btn-primary.news_btn_update(type='button' data-type="edit" data-id=newsElement._id value=index) 編輯
                             td.news_delete
-                                a(href="news/"+newsElement._id+"/remove", title="title") 
+                                a(href="cms_news/"+newsElement._id+"/remove", title="title") 
                                     button.btn.btn-danger(type='button' data-type="delete") 刪除
-        form.news_update_form(action="/news" method="post" enctype="multipart/form-data")
-            table.table.table-hover.table-striped.cms_edit
-                thead
-                    tr
-                        th.text-centeralign-middle 標題
-                        td.news_update_title 
-                            input(type="text" name="news_title" value=news[0].news_title)
-                    tr
-                        th.text-centeralign-middle.align-middle 內容
-                        td.news_update_content
-                            textarea(name="news_content", cols="30", rows="10" val="").align-middle
-                    tr
-                        th.text-centeralign-middle 圖片
-                        td.news_update_img
-                            img(src="", alt="")
-                            input(type="file" name="news_img")
-                    tr
-                        td
-                        td.text-right
-                            button.btn.btn-cansel(type='button' data-type="cancel") 取消編輯
-                            button.btn.btn-success.news_btn_submit(type='submit' data-type="confirm") 確定
+        if(news && news[0])
+            form.news_update_form(action="/cms_news" method="post" enctype="multipart/form-data")
+                table.table.table-hover.table-striped.cms_edit
+                    thead
+                        tr
+                            th.text-centeralign-middle 標題
+                            td.news_update_title 
+                                input(type="text" name="news_title")
+                        //- tr
+                        //-     th.text-centeralign-middle 發文日期
+                        //-     td.news_update_content
+                        //-         input(type="date")
+                        tr
+                            th.text-centeralign-middle.align-middle 內容
+                            td.news_update_content
+                                textarea(name="news_content", cols="30", rows="10" val="").align-middle
+                        tr
+                            th.text-centeralign-middle 圖片
+                            td.news_update_img
+                                img(src="", alt="")
+                                input(type="file" name="news_img")
+                        tr
+                            td
+                            td.text-right
+                                button.btn.btn-cansel(type='button' data-type="cancel") 取消編輯
+                                button.btn.btn-success.news_btn_submit(type='submit' data-type="confirm") 確定
 
                 
     //- nav
