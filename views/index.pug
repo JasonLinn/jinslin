@@ -6,16 +6,16 @@ html(lang="en")
         title Document
         link(href="plugin/bxslider/jquery.bxslider.min.css", rel="stylesheet")
         link(href="css/main.css", rel="stylesheet")
-        
+
     body
       #page-index
         .greetbox
           .logo
             img(src="/images/logo-o.png" class="rwd-img")
-          h1.title 
+          h1.title
             span 溫馨服務情
             span 窩心衿日林
-          .gobtn 
+          .gobtn
             a(href="about") 進入網站
           .iconbox
             ul
@@ -45,15 +45,20 @@ html(lang="en")
         .sliderbox
           ul#bannerSlider
             li
-              img(src="images/slider/slider1.jpg" class="rwd-img")
+              .pic(style="background-image:url(images/slider/slider1.jpg)")
+              //- img(src="images/slider/slider1.jpg" class="rwd-img")
             li
-              img(src="images/slider/slider2.jpg" class="rwd-img")
+              .pic(style="background-image:url(images/slider/slider2.jpg)")
+              //- img(src="images/slider/slider2.jpg" class="rwd-img")
             li
-              img(src="images/slider/slider3.jpg" class="rwd-img")
+              .pic(style="background-image:url(images/slider/slider3.jpg)")
+              //- img(src="images/slider/slider3.jpg" class="rwd-img")
             li
-              img(src="images/slider/slider4.jpg" class="rwd-img")
+              .pic(style="background-image:url(images/slider/slider4.jpg)")
+              //- img(src="images/slider/slider4.jpg" class="rwd-img")
             li
-              img(src="images/slider/slider5.jpg" class="rwd-img")
+              .pic(style="background-image:url(images/slider/slider5.jpg)")
+              //- img(src="images/slider/slider5.jpg" class="rwd-img")
         .newsbox
           .title 最新消息
           .contentbox
@@ -61,7 +66,7 @@ html(lang="en")
               if(news)
                 each newsElement,index in news
                   li #{newsElement.news_title} #{moment(newsElement.news_date).format("YYYY-MM-DD")}
-        footer 
+        footer
           .contact
             span 訂房專線：03-9500236
             span 行動：0928-073438
@@ -69,19 +74,16 @@ html(lang="en")
           .address
             span 地址：宜蘭縣冬山鄉武淵村(三)路116號
             span 傳真：03-9509677
-        
-script(src="/reload/reload.js")
-script(src="jquery/dist/jquery.js")
-script(src="plugin/bxslider/jquery.bxslider.min.js")
-script(src="js/layout.js")
+
+include ./components/script.pug     
 script.
-  
+
   if($(window).width() < 641){
     $('.logo img').attr('src','/images/logo-s.png');
     $('.gobtn a').addClass('whitearrow');
   }
-  
-  
+
+
   $('#bannerSlider').bxSlider({
     mode:'fade',
     controls:false,

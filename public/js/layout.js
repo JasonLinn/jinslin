@@ -5,13 +5,21 @@ $('#menuHam').on('change',function(){
   $('ul.menu').toggleClass('active');
 })
 
+$(window).on('scrollstart', function() {
+    $('header#header').stop(true, false).animate({ 'top': '-100px', 'opacity': 0 }, 100);
+    // alert(123)
+});
+
+$(window).bind('scrollstop', function(e) {
+    $('header#header').stop(true, false).animate({ 'top': '0px', 'opacity': 1 }, 500);
+});
 
 
 /*************/
 /****news****/
 /*************/
 
-$('.morebtn').click(function(){
+$('#page-news .morebtn').click(function(){
   let title = $(this).parent().children("div:first-child").text();
   let date = $(this).parent().children("div:nth-child(2)").text();
   let content = $(this).parent().children("div:nth-child(3)").text();
@@ -30,4 +38,20 @@ $('#popNewsDetail .popbg').click(function(){
 })
 $('#popNewsDetail .closebtn').click(function(){
   $('#popNewsDetail').hide();
+})
+
+/*************/
+/****tours****/
+/*************/
+
+$('#page-tours .morebtn').click(function(){
+  $('#popTourDetail').show();
+})
+
+
+$('#popTourDetail .popbg').click(function(){
+  $('#popTourDetail').hide();
+})
+$('#popTourDetail .closebtn').click(function(){
+  $('#popTourDetail').hide();
 })

@@ -6,16 +6,16 @@ html(lang="en")
         title Document
         link(href="plugin/fontawesome/css/font-awesome.min.css", rel="stylesheet")
         link(href="css/main.css", rel="stylesheet")
-        
+
     body
       include ./components/header.pug
       #page-news
         .bannerbox
-          h1.title 
+          h1.title
             span 溫馨服務情
             span 窩心衿日林
         .maincontent
-          h2 
+          h2
             span 最新消息
           ul#newsListBox
             if(news)
@@ -37,14 +37,12 @@ html(lang="en")
           .content
             .pic
               img(src="images/demo/demo1.png" class="rwd-img")
-            .text 
+            .text
               p 即日起預訂住宿，每房即贈送『2017宜蘭國際童玩藝術節平日券』兩張
               p 這麼有禮，還不趕快拿起電話預約！
               p 訂房專線：03-9500236、0928-073438 張小姐
               p 備註：本方案不得與其它優惠方案同時使用
       include ./components/footer.pug
-        
-        
-script(src="/reload/reload.js")
-script(src="jquery/dist/jquery.js")
-script(src="js/layout.js")
+
+
+include ./components/script.pug     

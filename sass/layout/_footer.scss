@@ -72,7 +72,11 @@ footer#footer{
     color: $grey;
     font-size: 0.8rem;
   }
-
+@media (max-width: 768px){
+ul.menu li{
+  padding: 0 10px;
+}
+}
   @media (max-width: 640px){
     .container{
       width: 100%;
@@ -83,7 +87,7 @@ footer#footer{
       .contactbox{
         display: block;
         .logo{
-          width: 50%;
+          width: 40%;
           margin: 0 auto;
         }
         .contact{

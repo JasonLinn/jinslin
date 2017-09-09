@@ -68,6 +68,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 1000;
     .popbg {
         position: absolute;
         top: 0;
@@ -82,6 +83,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 70%;
+        max-width: 800px;
+        max-height: 700px;
         padding: 30px;
         background-color: $white;
         .closebtn {
@@ -108,6 +111,10 @@
         .date {
             font-size: 1rem;
             padding: 15px 0;
+        }
+        .pic{
+          overflow: hidden;
+          max-height: 50%;
         }
         .text {
             margin-top: 20px;

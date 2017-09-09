@@ -1,199 +1,238 @@
-#page-index{
+#page-index {
   position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  .greetbox{
+
+  .greetbox {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-
     height: 100vh;
     width: 30vw;
     padding-top: 50px;
-
     background-color: rgba($white,0.8);
 
-    .logo{
+    .logo {
       width: 180px;
     }
 
-    .title{
+    .title {
       writing-mode: vertical-lr;
-      span{
+
+      span {
         display: block;
         padding: 0 10px;
-        &:nth-of-type(2){
+        font-size: 1.2rem;
+
+        &:nth-of-type(2) {
           text-indent: 1em;
         }
       }
     }
 
-    .gobtn{
+    .gobtn {
       width: 120px;
       text-align: center;
-      a{
+
+      a {
         display: block;
         position: relative;
-      &:after{
-        content: '';
 
-        position: absolute;
-        top: -20px;
-        left: 0;
+        &:after {
+          content: '';
+          position: absolute;
+          top: -20px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+          background-image: url('../images/icon/arrow.png');
+          background-repeat: no-repeat;
+          // background-size: cover;
+          background-position: 50%;
+        }
 
-        width: 100%;
-        height: 10px;
-        background-image: url('../images/icon/arrow.png');
-        background-repeat: no-repeat;
-        background-position: 50%
-        // background-size: cover;
-      }
-      &.whitearrow:after{
-        background-image: url('../images/icon/arrow-o.png');
-      }
+        &.whitearrow:after {
+          background-image: url('../images/icon/arrow-o.png');
+        }
       }
     }
 
-    .iconbox{
-      ul{
+    .iconbox {
+      ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         width: 100%;
-        li{
+
+        li {
           margin: 0 10px;
         }
 
-        a{
+        a {
           display: block;
         }
 
-        .icon{
+        .icon {
           width: 40px;
           margin: 0 auto;
         }
 
-        .name{
+        .name {
           padding: 10px 0;
           font-size: 0.625rem;
         }
-
-
       }
     }
 
-    .bottom{
+    .bottom {
       width: 100%;
       padding: 10px 20px;
       background-color: rgba($black,0.7);
 
-      .contact{
+      .contact {
         display: flex;
         padding: 8px 0;
       }
 
-      span{
-        font-size: 0.625rem;
+      span {
+        font-size: 0.725rem;
         color: $white;
         padding: 0 5px;
       }
     }
+  }
+  //greetingbox
 
-  }//greetingbox
+  .sliderbox {
+    height: 100vh;
 
-.newsbox{
-  position: absolute;
-  right: 40px;
-  bottom: 25px;
+    .pic {
+      height: 100vh;
+      background-size: cover;
+      background-position: 50%;
+    }
+  }
 
-  padding: 20px 10px 10px;
-
-  color: $white;
-  background-color: rgba($deepgreen,0.8);
-  .title{
+  .newsbox {
     position: absolute;
-    top: 0px;
-    left: 0;
-    transform: translate(-30%,-50%);
-
-    padding: 10px;
-    background-color: rgba($black,0.8);
+    right: 40px;
+    bottom: 25px;
+    padding: 20px 10px 10px;
     color: $white;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-  }
-  .contentbox{
-    overflow-y: auto;
-    height: 80px;
-  }
-  li{
-    padding: 8px 0;
-    // line-height: 1.5em;
-    font-size: 1rem;
-    color: $white;
-    border-bottom: 1px dotted $white;
-  }
+    background-color: rgba($deepgreen,0.8);
 
-}
-
-footer{
-  display: none;
-}
-
-
-
-//media query
-@media (max-width:640px) {
-  .greetbox{
-    top: 30px;
-    right:0;
-    width: 50vw;
-    height: 60vh;
-    margin: 0 auto;
-    background-color: rgba($deepblue,0.8);
-    box-shadow: 0px 0px 0px 5px rgba($deepblue,0.5);
-  }
-  .title{
-    span{
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-30%,-50%);
+      padding: 10px;
+      background-color: rgba($black,0.8);
       color: $white;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+
+    .contentbox {
+      overflow-y: auto;
+      height: 80px;
+    }
+
+    li {
+      padding: 8px 0;
+      // line-height: 1.5em;
+      font-size: 1rem;
+      color: $white;
+      border-bottom: 1px dotted $white;
     }
   }
-  .gobtn{
-    padding: 10px 0;
-    a{
-      color: $white;
-    }
-  }
-  .iconbox{
+
+  footer {
     display: none;
   }
-  .bottom{
-    display: none;
-  }
-  .newsbox{
-    width: 85%;
-    right: 0;
-    left: 0;
-    bottom: 10px;
-    margin: 0 auto;
-    .title{
-      transform: translate(-10%,-50%);
+  //media query
+  @media (max-width:1280px) {
+    .greetbox .bottom .address,
+    .greetbox .bottom .contact {
+      display: block;
+
+      span {
+        display: block;
+        padding: 5px 0;
+        font-size: 0.9rem;
+      }
     }
   }
-}
+  @media (max-width:1024px) {
+    .greetbox .title span {
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width:768px) {
+    .newsbox {
+      width: 55%;
+      li{
+        line-height: 1.5em;
+      }
+    }
+  }
+  @media (max-width:640px) {
+    .greetbox {
+      top: 30px;
+      right: 0;
+      width: 50vw;
+      height: 60vh;
+      margin: 0 auto;
+      background-color: rgba($deepblue,0.8);
+      box-shadow: 0 0 0 5px rgba($deepblue,0.5);
+    }
 
+    .title {
+      span {
+        color: $white;
+      }
+    }
 
-footer{
-  display: block;
-}
+    .gobtn {
+      padding: 10px 0;
 
+      a {
+        color: $white;
+      }
+    }
 
+    .iconbox {
+      display: none;
+    }
+
+    .bottom {
+      display: none;
+    }
+
+    .newsbox {
+      width: 85%;
+      right: 0;
+      left: 0;
+      bottom: 10px;
+      margin: 0 auto;
+
+      .title {
+        transform: translate(-10%,-50%);
+      }
+    }
+  }
+  @media (max-width:480px) {
+    .greetbox .title span{
+      font-size: 1rem;
+    }
+  }
+  footer {
+    display: block;
+  }
 }
