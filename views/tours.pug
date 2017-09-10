@@ -31,46 +31,63 @@ html(lang="en")
                   .title ◎ 預約方式
                   .text 參加以上套裝行程，請電話連絡確認，並請匯付全額款項，請將收據傳真(03-9509677) 註明姓名、住宿日期、人數，確認訂房成功。其它事項請參閱衿日林網頁介紹及客房介紹內容。
           ul#toursListBox
-            li
-              .container
-                .pic
-                  img(src="images/slider/slider10.jpg" class="rwd-img")
-                .text
-                  .title 溫泉館冬之戀之旅
-                  .contentbox
-                    .item
-                      .contenttitle 方案內容
-                      .content 住宿+賞鯨繞島船票+衿日林庭園咖啡中、西式自助早餐+香醇現煮咖啡or飲料+免費單車暢遊冬山河畔。
-                    .item.item2
-                      .contenttitle 優惠價
-                      .content
-                        span 迷你雙人套房平日/每人1399元 假日/每人1599元
-                        span 英式或印度風雙人房 平日/每人1550元 假日/每人1950元
-                        span 渡假蜜月雙人房 平日/每人1680元 假日/每人1990元
-                        span 溫馨親子四人房 平日/每人1350元 假日/每人1590元
-                        span 迎賓花嫁四人房 平日/每人1450元 假日/每人1650元
-                            span 巧巧四人房 平日/每人1280元 假日/每人14.....
-                  .morebtn 詳細介紹
-            li
-              .container
-                .pic
-                  img(src="images/slider/slider12.jpg" class="rwd-img")
-                .text
-                  .title 溫泉館冬之戀之旅
-                  .contentbox
-                    .item
-                      .contenttitle 方案內容
-                      .content 住宿+賞鯨繞島船票+衿日林庭園咖啡中、西式自助早餐+香醇現煮咖啡or飲料+免費單車暢遊冬山河畔。
-                    .item.item2
-                      .contenttitle 優惠價
-                      .content
-                        span 迷你雙人套房平日/每人1399元 假日/每人1599元
-                        span 英式或印度風雙人房 平日/每人1550元 假日/每人1950元
-                        span 渡假蜜月雙人房 平日/每人1680元 假日/每人1990元
-                        span 溫馨親子四人房 平日/每人1350元 假日/每人1590元
-                        span 迎賓花嫁四人房 平日/每人1450元 假日/每人1650元
-                        span 巧巧四人房 平日/每人1280元 假日/每人14.....
-                  .morebtn 詳細介紹
+            if(tours)
+              each toursElement,index in tours
+                li
+                  .container
+                    .pic
+                      img(src=toursElement.tours_img class="rwd-img")
+                    .text
+                      .title=toursElement.tours_title
+                      .contentbox
+                        .item
+                          .contenttitle 方案內容
+                          .content=toursElement.tours_content
+                        .item.item2
+                          .contenttitle 優惠價
+                          .content
+                            span=toursElement.tours_price
+                      .morebtn 詳細介紹
+              //- li
+              //-   .container
+              //-     .pic
+              //-       img(src="images/slider/slider10.jpg" class="rwd-img")
+              //-     .text
+              //-       .title 溫泉館冬之戀之旅
+              //-       .contentbox
+              //-         .item
+              //-           .contenttitle 方案內容
+              //-           .content 住宿+賞鯨繞島船票+衿日林庭園咖啡中、西式自助早餐+香醇現煮咖啡or飲料+免費單車暢遊冬山河畔。
+              //-         .item.item2
+              //-           .contenttitle 優惠價
+              //-           .content
+              //-             span 迷你雙人套房平日/每人1399元 假日/每人1599元
+              //-             span 英式或印度風雙人房 平日/每人1550元 假日/每人1950元
+              //-             span 渡假蜜月雙人房 平日/每人1680元 假日/每人1990元
+              //-             span 溫馨親子四人房 平日/每人1350元 假日/每人1590元
+              //-             span 迎賓花嫁四人房 平日/每人1450元 假日/每人1650元
+              //-                 span 巧巧四人房 平日/每人1280元 假日/每人14.....
+              //-       .morebtn 詳細介紹
+              //- li
+              //-   .container
+              //-     .pic
+              //-       img(src="images/slider/slider12.jpg" class="rwd-img")
+              //-     .text
+              //-       .title 溫泉館冬之戀之旅
+              //-       .contentbox
+              //-         .item
+              //-           .contenttitle 方案內容
+              //-           .content 住宿+賞鯨繞島船票+衿日林庭園咖啡中、西式自助早餐+香醇現煮咖啡or飲料+免費單車暢遊冬山河畔。
+              //-         .item.item2
+              //-           .contenttitle 優惠價
+              //-           .content
+              //-             span 迷你雙人套房平日/每人1399元 假日/每人1599元
+              //-             span 英式或印度風雙人房 平日/每人1550元 假日/每人1950元
+              //-             span 渡假蜜月雙人房 平日/每人1680元 假日/每人1990元
+              //-             span 溫馨親子四人房 平日/每人1350元 假日/每人1590元
+              //-             span 迎賓花嫁四人房 平日/每人1450元 假日/每人1650元
+              //-             span 巧巧四人房 平日/每人1280元 假日/每人14.....
+              //-       .morebtn 詳細介紹
       #popTourDetail
         .popbg
         .popcontent

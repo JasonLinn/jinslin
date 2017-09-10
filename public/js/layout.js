@@ -54,4 +54,14 @@ $('#popTourDetail .popbg').click(function(){
 })
 $('#popTourDetail .closebtn').click(function(){
   $('#popTourDetail').hide();
+  let title = $(this).parent().children("div:first-child").text();
+  let date = $(this).parent().children("div:nth-child(2)").text();
+  let content = $(this).parent().children("div:nth-child(3)").text();
+  let imgURL = $(this).parent().children("input").val();
+  console.log(title,date,imgURL)
+  $('#popTourDetail').show();
+  $('#popTourDetail .title').text(title);
+  $('#popTourDetail .date').text(date);
+  $('#popTourDetail .content .text').text(content);
+  $('#popTourDetail .content .pic').children("img").attr("src",imgURL);
 })
