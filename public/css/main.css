@@ -354,9 +354,10 @@ footer#footer .copyright {
     padding-top: 50px;
     background-color: rgba(255, 255, 255, 0.8); }
     #page-index .greetbox .logo {
-      width: 180px; }
+      width: 160px; }
     #page-index .greetbox .title {
-      writing-mode: vertical-lr; }
+      writing-mode: vertical-lr;
+      margin-top: 30px; }
       #page-index .greetbox .title span {
         display: block;
         padding: 0 10px;
@@ -364,9 +365,9 @@ footer#footer .copyright {
         #page-index .greetbox .title span:nth-of-type(2) {
           text-indent: 1em; }
     #page-index .greetbox .gobtn {
-      width: 120px;
-      height: 120px;
-      line-height: 120px;
+      width: 100%;
+      height: 90px;
+      line-height: 90px;
       text-align: center; }
       #page-index .greetbox .gobtn a {
         display: block;
@@ -376,8 +377,10 @@ footer#footer .copyright {
           position: absolute;
           top: 10px;
           left: 0;
-          width: 100%;
+          right: 0;
+          width: 120px;
           height: 10px;
+          margin: 0 auto;
           background-image: url("../images/icon/arrow.png");
           background-repeat: no-repeat;
           background-position: 50%; }
@@ -444,6 +447,8 @@ footer#footer .copyright {
   #page-index footer {
     display: none; }
   @media (max-width: 1280px) {
+    #page-index .greetbox .title span {
+      font-size: 1rem; }
     #page-index .greetbox .bottom .address,
     #page-index .greetbox .bottom .contact {
       display: block; }
@@ -454,7 +459,7 @@ footer#footer .copyright {
         font-size: 0.9rem; } }
   @media (max-width: 1024px) {
     #page-index .greetbox .title span {
-      font-size: 1.2rem; } }
+      font-size: 1rem; } }
   @media (max-width: 768px) {
     #page-index .newsbox {
       width: 55%; }
