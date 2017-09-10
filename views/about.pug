@@ -1,13 +1,7 @@
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-        link(rel="stylesheet", href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css")
-        link(href="plugin/fontawesome/css/font-awesome.min.css", rel="stylesheet")
-        link(href="css/main.css", rel="stylesheet")
-        
+        include ./components/head.pug
+
     body
       include ./components/header.pug
       #page-about
@@ -27,13 +21,13 @@ html(lang="en")
           ul.picbox
             li
               .pic
-                img(src="images/about/about3.jpg" class="rwd-img")
+                img(src="images/about/about3.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
             li
               .pic
-                img(src="images/about/about2.jpg" class="rwd-img")
+                img(src="images/about/about2.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
             li
               .pic
-                img(src="images/about/about6.jpg" class="rwd-img")
+                img(src="images/about/about6.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
           .aboutbox
             .container
               span 得天獨厚的地理環境黎明的晨曦　
@@ -42,17 +36,17 @@ html(lang="en")
           ul.picbox
             li
               .pic
-                img(src="images/about/about4.jpg" class="rwd-img")
+                img(src="images/about/about4.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
             li
               .pic
-                img(src="images/about/about5.jpg" class="rwd-img")
+                img(src="images/about/about5.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
             li
               .pic
-                img(src="images/about/about7.jpg" class="rwd-img")
+                img(src="images/about/about7.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
           .bottombanner
             .container
               .pic
-                img(src="images/about/about1.jpg" class="rwd-img")
+                img(src="images/about/about1.jpg" class="rwd-img" alt="衿日林 民宿 宜蘭 旅遊 推薦 旅館 B&B 自助 冬山河")
                       
       include ./components/footer.pug
         

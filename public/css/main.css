@@ -335,6 +335,11 @@ footer#footer .copyright {
   height: 100vh;
   width: 100vw;
   overflow: hidden; }
+  #page-index #bannerSlider li:nth-of-type(1) .pic {
+    background-image: url("../images/slider/slider1.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; }
   #page-index .greetbox {
     position: absolute;
     top: 0;
@@ -360,6 +365,8 @@ footer#footer .copyright {
           text-indent: 1em; }
     #page-index .greetbox .gobtn {
       width: 120px;
+      height: 120px;
+      line-height: 120px;
       text-align: center; }
       #page-index .greetbox .gobtn a {
         display: block;
@@ -367,7 +374,7 @@ footer#footer .copyright {
         #page-index .greetbox .gobtn a:after {
           content: '';
           position: absolute;
-          top: -20px;
+          top: 10px;
           left: 0;
           width: 100%;
           height: 10px;
@@ -414,7 +421,8 @@ footer#footer .copyright {
     bottom: 25px;
     padding: 20px 10px 10px;
     color: #fff;
-    background-color: rgba(61, 131, 130, 0.8); }
+    background-color: rgba(61, 131, 130, 0.8);
+    z-index: 1000; }
     #page-index .newsbox .title {
       position: absolute;
       top: 0;
@@ -457,7 +465,7 @@ footer#footer .copyright {
       top: 30px;
       right: 0;
       width: 50vw;
-      height: 60vh;
+      height: 70vh;
       margin: 0 auto;
       background-color: rgba(5, 67, 103, 0.8);
       box-shadow: 0 0 0 5px rgba(5, 67, 103, 0.5); }
@@ -482,6 +490,15 @@ footer#footer .copyright {
   @media (max-width: 480px) {
     #page-index .greetbox .title span {
       font-size: 1rem; } }
+  @media (max-width: 320px) {
+    #page-index .greetbox .title {
+      writing-mode: initial;
+      margin-top: 20px; }
+      #page-index .greetbox .title span {
+        padding: 5px 0; }
+    #page-index .greetbox .gobtn {
+      height: 80px;
+      line-height: 80px; } }
   #page-index footer {
     display: block; }
 
@@ -921,17 +938,15 @@ footer#footer .copyright {
     width: 100%;
     height: 100%;
     background-color: rgba(59, 64, 67, 0.7); }
-  #popNewsDetail .popcontent {
+  #popNewsDetail .popcontentbox {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 800px;
-    max-height: 700px;
-    padding: 30px;
+    width: auto;
+    height: auto;
     background-color: #fff; }
-    #popNewsDetail .popcontent .closebtn {
+    #popNewsDetail .popcontentbox .closebtn {
       position: absolute;
       top: 0;
       right: 0;
@@ -940,10 +955,18 @@ footer#footer .copyright {
       line-height: 30px;
       background-color: rgba(59, 64, 67, 0.8);
       text-align: center;
-      font-size: 1.5rem; }
-      #popNewsDetail .popcontent .closebtn i {
+      font-size: 1.5rem;
+      z-index: 1000;
+      cursor: pointer; }
+      #popNewsDetail .popcontentbox .closebtn i {
         color: #fff;
         line-height: 30px; }
+  #popNewsDetail .popcontent {
+    width: 100%;
+    max-width: 800px;
+    max-height: 700px;
+    padding: 30px;
+    overflow-y: auto; }
     #popNewsDetail .popcontent .title {
       color: #054367;
       font-size: 1.4rem;
@@ -1087,19 +1110,14 @@ footer#footer .copyright {
     width: 100%;
     height: 100%;
     background-color: rgba(59, 64, 67, 0.7); }
-  #popTourDetail .popcontent {
+  #popTourDetail .popcontentbox {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 800px;
-    height: 60vh;
-    max-height: 700px;
-    padding: 10px;
-    background-color: #fff;
-    overflow-y: auto; }
-    #popTourDetail .popcontent .closebtn {
+    width: auto;
+    height: auto; }
+    #popTourDetail .popcontentbox .closebtn {
       position: absolute;
       top: 0;
       right: 0;
@@ -1109,16 +1127,26 @@ footer#footer .copyright {
       background-color: rgba(59, 64, 67, 0.8);
       text-align: center;
       font-size: 1.5rem;
-      z-index: 100; }
-      #popTourDetail .popcontent .closebtn i {
+      z-index: 100;
+      cursor: pointer; }
+      #popTourDetail .popcontentbox .closebtn i {
         color: #fff;
         line-height: 30px; }
+  #popTourDetail .popcontent {
+    width: 100%;
+    max-width: 800px;
+    height: 60vh;
+    max-height: 700px;
+    padding: 10px;
+    background-color: #fff;
+    overflow-y: auto; }
     #popTourDetail .popcontent .pic {
       position: relative;
       padding-bottom: 50%;
       background-size: cover;
       background-position: 50%;
-      box-shadow: 1px 1px 10px #3b4043; }
+      box-shadow: 1px 1px 10px #3b4043;
+      z-index: 0; }
     #popTourDetail .popcontent #prevBtn, #popTourDetail .popcontent #nextBtn {
       position: absolute;
       top: 50%;

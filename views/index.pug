@@ -1,11 +1,6 @@
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-        link(href="plugin/bxslider/jquery.bxslider.min.css", rel="stylesheet")
-        link(href="css/main.css", rel="stylesheet")
+        include ./components/head.pug
 
     body
       #page-index
@@ -45,7 +40,8 @@ html(lang="en")
         .sliderbox
           ul#bannerSlider
             li
-              .pic(style="background-image:url(images/slider/slider1.jpg)")
+              .pic
+              // .pic(style="background-image:url(images/slider/slider1.jpg)")
               //- img(src="images/slider/slider1.jpg" class="rwd-img")
             li
               .pic(style="background-image:url(images/slider/slider2.jpg)")
@@ -61,7 +57,7 @@ html(lang="en")
               //- img(src="images/slider/slider5.jpg" class="rwd-img")
         .newsbox
           .title 最新消息
-          .contentbox
+          .contentbox.mCustomScrollbar(data-mcs-theme="dark")
             ul#newsListBox
               if(news)
                 each newsElement,index in news
@@ -75,7 +71,7 @@ html(lang="en")
             span 地址：宜蘭縣冬山鄉武淵村(三)路116號
             span 傳真：03-9509677
 
-include ./components/script.pug     
+include ./components/script.pug
 script.
 
   if($(window).width() < 641){
