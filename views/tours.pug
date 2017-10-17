@@ -6,15 +6,15 @@ html(lang="en")
       include ./components/header.pug
       #page-tours
         .bannerbox
-          h1.title
+          h1.title.wow.fadeInUpCust
             span 溫馨服務情
             span 窩心衿日林
         .maincontent
           h2
-            span 套裝行程
+            span.wow.fadeInUp 套裝行程
           .noticebox
             .container
-              ul.notice
+              ul.notice.wow.fadeInUp
                 li
                   .title ◎ 貼心叮嚀
                   .text
@@ -28,7 +28,7 @@ html(lang="en")
           ul#toursListBox
             if(tours)
               each toursElement,index in tours
-                li
+                li.wow.fadeInUp
                   .container
                     .pic
                       img(src=toursElement.tours_img class="rwd-img")

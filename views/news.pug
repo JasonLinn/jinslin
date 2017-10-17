@@ -6,16 +6,16 @@ html(lang="en")
       include ./components/header.pug
       #page-news
         .bannerbox
-          h1.title
+          h1.title.wow.fadeInUpCust
             span 溫馨服務情
             span 窩心衿日林
         .maincontent
           h2
-            span 最新消息
+            span.wow.fadeInUp 最新消息
           ul#newsListBox
             if(news)
               each newsElement,index in news
-                li
+                li.wow.fadeInUp
                   .container
                     .title=newsElement.news_title
                     .date 發佈日期： #{moment(newsElement.news_date).format("YYYY-MM-DD")}

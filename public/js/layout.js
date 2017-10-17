@@ -1,86 +1,79 @@
 /*************/
 /****header****/
 /*************/
-$('#menuHam').on('change',function(){
+$('#menuHam').on('change', function() {
   $('ul.menu').toggleClass('active');
 })
 
 $(window).on('scrollstart', function() {
-    $('header#header').stop(true, false).animate({ 'top': '-100px', 'opacity': 0 }, 100);
+  $('header#header').stop(true, false).animate({
+    'top': '-100px',
+    'opacity': 0
+  }, 100);
 });
 
 $(window).bind('scrollstop', function(e) {
-    $('header#header').stop(true, false).animate({ 'top': '0px', 'opacity': 1 }, 500);
+  $('header#header').stop(true, false).animate({
+    'top': '0px',
+    'opacity': 1
+  }, 500);
 });
-
-
 
 /*************/
 /****index****/
 /*************/
 
-$('#page-index .newsbox .contentbox').mCustomScrollbar({
-  axis: "y"
-})
-
-
+$('#page-index .newsbox .contentbox').mCustomScrollbar({axis: "y"})
 
 /*************/
 /****news****/
 /*************/
 
-$('#page-news .morebtn').click(function(){
+$('#page-news .morebtn').click(function() {
   let title = $(this).parent().children("div:first-child").text();
   let date = $(this).parent().children("div:nth-child(2)").text();
   let content = $(this).parent().children("div:nth-child(3)").text();
   let imgURL = $(this).parent().children("input").val();
-  console.log(title,date,imgURL)
+  console.log(title, date, imgURL)
   fixedBody();
   $('#popNewsDetail').show();
   $('#popNewsDetail .title').text(title);
   $('#popNewsDetail .date').text(date);
   $('#popNewsDetail .content .text').text(content);
-  $('#popNewsDetail .content .pic').children("img").attr("src",imgURL);
+  $('#popNewsDetail .content .pic').children("img").attr("src", imgURL);
 
 })
 
-$('#popNewsDetail .popbg').click(function(){
+$('#popNewsDetail .popbg').click(function() {
   looseBody();
   $('#popNewsDetail').hide();
 })
-$('#popNewsDetail .closebtn').click(function(){
+$('#popNewsDetail .closebtn').click(function() {
   looseBody();
   $('#popNewsDetail').hide();
 })
 
-$('#popNewsDetail .popcontent').mCustomScrollbar({
-  axis: "y"
-})
+$('#popNewsDetail .popcontent').mCustomScrollbar({axis: "y"})
 
 /*************/
 /****tours****/
 /*************/
 
-$('#page-tours .morebtn').click(function(){
+$('#page-tours .morebtn').click(function() {
   fixedBody();
   $('#popTourDetail').show();
 })
 
-
-$('#popTourDetail .popbg').click(function(){
+$('#popTourDetail .popbg').click(function() {
   $('#popTourDetail').hide();
   looseBody();
 })
-$('#popTourDetail .closebtn').click(function(){
+$('#popTourDetail .closebtn').click(function() {
   $('#popTourDetail').hide();
   looseBody();
 })
 
-$('#popTourDetail .popcontent').mCustomScrollbar({
-  axis: "y"
-})
-
-
+$('#popTourDetail .popcontent').mCustomScrollbar({axis: "y"})
 
 //*******************/
 //******固定背景*****/
@@ -97,3 +90,17 @@ function looseBody() {
   document.body.scrollTop = document.documentElement.scrollTop = -parseInt(top);
   body.style.top = '';
 }
+
+//*******************/
+//******滾動特效*****/
+//******************/
+//
+wow = new WOW({
+  boxClass: 'wow', // default
+  animateClass: 'animated', // default
+  offset: 0, // default
+  mobile: true, // default
+  live: true // default
+})
+wow.init();
+// console.log(wow)
