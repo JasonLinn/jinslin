@@ -5,19 +5,19 @@ $('#menuHam').on('change', function() {
   $('ul.menu').toggleClass('active');
 })
 
-$(window).on('scrollstart', function() {
-  $('header#header').stop(true, false).animate({
-    'top': '-100px',
-    'opacity': 0
-  }, 100);
-});
-
-$(window).bind('scrollstop', function(e) {
-  $('header#header').stop(true, false).animate({
-    'top': '0px',
-    'opacity': 1
-  }, 500);
-});
+// $(window).on('scrollstart', function() {
+//   $('header#header').stop(true, false).animate({
+//     'top': '-100px',
+//     'opacity': 0
+//   }, 100);
+// });
+//
+// $(window).bind('scrollstop', function(e) {
+//   $('header#header').stop(true, false).animate({
+//     'top': '0px',
+//     'opacity': 1
+//   }, 500);
+// });
 
 /*************/
 /****index****/
