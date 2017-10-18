@@ -83,6 +83,9 @@
 
         .text {
           flex: 1;
+          align-self: stretch;
+          display: flex;
+          flex-direction: column;
           padding: 0 10px;
         }
 
@@ -91,8 +94,15 @@
           color: $deepblue;
           font-size: 1.15rem;
           font-weight: 500;
+          width: 100%;
         }
-
+        .contentbox{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          flex: 2;
+        }
         .item {
           display: flex;
           flex-wrap: wrap;
@@ -101,6 +111,7 @@
           margin-top: 20px;
           font-size: 1rem;
           line-height: 1.5em;
+          flex:1;
         }
 
         .contenttitle {

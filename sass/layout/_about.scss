@@ -1,5 +1,6 @@
 #page-about {
   background-image: url('../images/contents_bg.png');
+  width: 100%;
 
   .bannerbox {
     background-image: url('../images/banner/aboutbanner.jpg');
@@ -48,7 +49,9 @@ ul.picbox{
   display: flex;
   li{
     flex:1;
-    padding: 10px 5px;
+    .pic{
+      padding: 10px 5px;
+    }
   }
 }
 

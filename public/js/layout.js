@@ -60,20 +60,35 @@ $('#popNewsDetail .popcontent').mCustomScrollbar({axis: "y"})
 /*************/
 
 $('#page-tours .morebtn').click(function() {
-  fixedBody();
+  stopScroll();
   $('#popTourDetail').show();
+
 })
 
 $('#popTourDetail .popbg').click(function() {
+  startScroll();
   $('#popTourDetail').hide();
-  looseBody();
 })
 $('#popTourDetail .closebtn').click(function() {
+  startScroll();
   $('#popTourDetail').hide();
-  looseBody();
 })
 
 $('#popTourDetail .popcontent').mCustomScrollbar({axis: "y"})
+
+function preventDefaultHandler(e) {
+  e.preventDefault();
+};
+
+function startScroll() {
+  document.removeEventListener('mousewheel', preventDefaultHandler, false);
+  document.removeEventListener('DOMMouseScroll', preventDefaultHandler, false); //firefox
+}
+
+function stopScroll() {
+  document.addEventListener('mousewheel', preventDefaultHandler, false);
+  document.addEventListener('DOMMouseScroll', preventDefaultHandler, false);
+}
 
 //*******************/
 //******固定背景*****/
