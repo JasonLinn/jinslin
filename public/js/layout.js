@@ -35,7 +35,8 @@ $('#page-news .morebtn').click(function() {
   let content = $(this).parent().children("div:nth-child(3)").text();
   let imgURL = $(this).parent().children("input").val();
   console.log(title, date, imgURL)
-  fixedBody();
+  // fixedBody();
+  stopScroll();
   $('#popNewsDetail').show();
   $('#popNewsDetail .title').text(title);
   $('#popNewsDetail .date').text(date);
@@ -45,11 +46,13 @@ $('#page-news .morebtn').click(function() {
 })
 
 $('#popNewsDetail .popbg').click(function() {
-  looseBody();
+  // looseBody();
+  startScroll();
   $('#popNewsDetail').hide();
 })
 $('#popNewsDetail .closebtn').click(function() {
-  looseBody();
+  // looseBody();
+  startScroll();
   $('#popNewsDetail').hide();
 })
 
@@ -113,7 +116,7 @@ function looseBody() {
 wow = new WOW({
   boxClass: 'wow', // default
   animateClass: 'animated', // default
-  offset: 0, // default
+  offset: 100, // default
   mobile: true, // default
   live: true // default
 })
