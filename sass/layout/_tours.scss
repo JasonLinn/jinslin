@@ -35,7 +35,7 @@
       margin-bottom: 80px;
 
       .notice {
-        width: 60%;
+        width: 100%;
         margin: 0 auto;
         padding: 30px;
         background-color: rgba($white,0.6);
@@ -86,13 +86,13 @@
           align-self: stretch;
           display: flex;
           flex-direction: column;
-          padding: 0 10px;
+          padding: 0 0 0 30px;
         }
 
         .title {
-          margin-bottom: 30px;
+          // margin-bottom: 30px;
           color: $deepblue;
-          font-size: 1.15rem;
+          font-size: 1.5rem;
           font-weight: 500;
           width: 100%;
         }
@@ -115,6 +115,7 @@
         }
 
         .contenttitle {
+          // font-size: 1.25rem;
           width: 15%;
         }
 

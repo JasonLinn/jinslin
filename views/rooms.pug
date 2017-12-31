@@ -3,11 +3,12 @@ html(lang="en")
         include ./components/head.pug
     body
       include ./components/header.pug
-      #page-rooms
-        .bannerbox
-          h1.title.wow.fadeInUpCust
-            span 溫馨服務情
-            span 窩心衿日林
+      #page-rooms.page
+        //- .bannerbox
+        //-   h1.title.wow.fadeInUpCust
+        //-     span 溫馨服務情
+        //-     span 窩心衿日林
+
         .maincontent
           .topbox.wow.fadeInUp
             h2
@@ -18,7 +19,7 @@ html(lang="en")
               span 地址：宜蘭縣冬山鄉武淵村(三)路116號
               span 團體或多日定房另享有優惠！
           .roomlistbox
-            ul#roomList
+            ul#roomList.bxslider
               li.roomitem.wow.fadeInUp
                 .container
                   .pic(style="background-image:url('images/room/room01.png')")
@@ -94,7 +95,6 @@ html(lang="en")
             //-   li.active
             //-   li
             //-   li
-        
           .servicelistbox.wow.fadeInUp
             h2
               span 貼心服務
@@ -230,37 +230,37 @@ script.
   $('li.info .turnbtn').click(function(){
     $(this).parents('li.info').toggleClass('turnoff');
   })
-  //- $(function (){
-  //-   var window_W = $(window).width();
-  //-   var sliderW = $('#roomList li').width();
+  $(function (){
+    var window_W = $(window).width();
+    var sliderW = $('#roomList li').width();
 
-  //-   if(window_W < 641){
-  //-     var sliderMargin = 30;
-  //-   }else{
-  //-      var sliderMargin = window_W * 0.2 / 2;
-  //-   }
-  //-   //一個slider佔畫面 40% ,margin20%
+    if(window_W < 641){
+      var sliderMargin = 200;
+    }else{
+       var sliderMargin = window_W * 0.2 / 2;
+    }
+    //一個slider佔畫面 40% ,margin20%
 
-  //-   var roomSlider = $('#roomList').bxSlider({
-  //-     //- pager:false,
-  //-     controls:false,
-  //-     touchEnabled:false,
-  //-     infiniteLoop:true,
-  //-     slideWidth: sliderW,
-  //-     slideMargin: sliderMargin,
-  //-     onSlideBefore:function($slideElement, oldIndex, newIndex){
-  //-       $slideElement.addClass('active').siblings().removeClass('active');
-  //-     }
-  //-   });
+    var roomSlider = $('#roomList').bxSlider({
+      //- pager:false,
+      controls:false,
+      touchEnabled:false,
+      infiniteLoop:true,
+      slideWidth: sliderW,
+      slideMargin: sliderMargin,
+      onSlideBefore:function($slideElement, oldIndex, newIndex){
+        $slideElement.addClass('active').siblings().removeClass('active');
+      }
+    });
 
-  //-     $('.bx-viewport').css('overflow','visible');
+      $('.bx-viewport').css('overflow','visible');
 
 
 
-  //-   $('#sliderNext').click(function(){
-  //-     roomSlider.goToNextSlide();
-  //-   })
-  //-   $('#sliderPrev').click(function(){
-  //-     roomSlider.goToPrevSlide();
-  //-   })
-  //- })
+    $('#sliderNext').click(function(){
+      roomSlider.goToNextSlide();
+    })
+    $('#sliderPrev').click(function(){
+      roomSlider.goToPrevSlide();
+    })
+  })

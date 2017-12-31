@@ -85,6 +85,9 @@ a {
 .deepblue {
   color: #054367; }
 
+.page {
+  padding-top: 70px; }
+
 .bannerbox {
   position: relative;
   width: 1170px;
@@ -94,7 +97,7 @@ a {
   background-size: cover; }
   .bannerbox .title {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 100;
@@ -521,7 +524,7 @@ footer#footer .copyright {
   background-image: url("../images/contents_bg.png");
   width: 100%; }
   #page-about .bannerbox {
-    background-image: url("../images/banner/aboutbanner.jpg"); }
+    background-image: url("../images/banner/roomsbanner.jpg"); }
   #page-about .maincontent {
     padding: 20px 0 50px; }
     #page-about .maincontent h2 {
@@ -551,7 +554,9 @@ footer#footer .copyright {
         display: block;
         padding: 10px 0; }
     #page-about .maincontent ul.picbox {
-      display: flex; }
+      display: flex;
+      width: 1170px;
+      margin: auto; }
       #page-about .maincontent ul.picbox li {
         flex: 1; }
         #page-about .maincontent ul.picbox li .pic {
@@ -572,9 +577,20 @@ footer#footer .copyright {
     background-color: #fff;
     box-shadow: 1px 2px 5px #999; }
   #page-rooms .bx-wrapper .bx-pager.bx-default-pager a.active {
+    display: block;
+    width: 20px;
+    height: 20px;
     background-color: rgba(5, 67, 103, 0.7); }
+  #page-rooms .bx-wrapper .bx-pager.bx-default-pager a {
+    display: block;
+    width: 20px;
+    height: 20px; }
+  #page-rooms .bx-pager {
+    text-align: center; }
   #page-rooms .bannerbox {
     background-image: url("../images/banner/roomsbanner.jpg"); }
+  #page-rooms .bx-pager-item {
+    display: inline-block; }
   #page-rooms .maincontent {
     padding: 20px 0 50px; }
     #page-rooms .maincontent h2 {
@@ -603,7 +619,9 @@ footer#footer .copyright {
         padding: 10px 0; }
     #page-rooms .maincontent .roomlistbox {
       position: relative;
-      margin-bottom: 80px; }
+      width: 1170px;
+      margin-bottom: 80px;
+      margin: auto; }
     #page-rooms .maincontent #roomList li.roomitem {
       background-color: #fff;
       margin-bottom: 30px;
@@ -1029,7 +1047,7 @@ footer#footer .copyright {
     #page-tours .maincontent .noticebox {
       margin-bottom: 80px; }
       #page-tours .maincontent .noticebox .notice {
-        width: 60%;
+        width: 100%;
         margin: 0 auto;
         padding: 30px;
         background-color: rgba(255, 255, 255, 0.6); }
@@ -1061,11 +1079,10 @@ footer#footer .copyright {
         align-self: stretch;
         display: flex;
         flex-direction: column;
-        padding: 0 10px; }
+        padding: 0 0 0 30px; }
       #page-tours .maincontent #toursListBox li .title {
-        margin-bottom: 30px;
         color: #054367;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
         font-weight: 500;
         width: 100%; }
       #page-tours .maincontent #toursListBox li .contentbox {
@@ -1250,10 +1267,10 @@ footer#footer .copyright {
         display: block;
         padding: 5px 0; }
     #page-traffic .maincontent .trafficbox #mapBox {
-      width: 60%;
+      width: 100%;
       height: 50vh; }
     #page-traffic .maincontent .trafficbox .boxitem {
-      width: 60%;
+      width: 100%;
       margin: 50px auto; }
     #page-traffic .maincontent .trafficinfo {
       padding: 30px;

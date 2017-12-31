@@ -15,13 +15,29 @@
   }
 
   .bx-wrapper .bx-pager.bx-default-pager a.active {
+    display: block;
+    width: 20px;
+    height: 20px;
     background-color: rgba($deepblue, 0.7);
   }
 
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .bx-pager {
+    text-align: center;
+  }
+ 
   .bannerbox {
     background-image: url('../images/banner/roomsbanner.jpg');
   }
 
+  .bx-pager-item {
+    display: inline-block;
+  }
   .maincontent {
     padding: 20px 0 50px;
 
@@ -61,7 +77,9 @@
 
     .roomlistbox {
       position: relative;
+      width: 1170px;
       margin-bottom: 80px;
+      margin: auto;
     }
 
     #roomList {
