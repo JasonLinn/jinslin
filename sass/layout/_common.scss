@@ -52,13 +52,15 @@ a {
 
 .bannerbox {
   position: relative;
-  height: 100vh;
+  width: 1170px;
+  height: 50vh;
+  margin: auto;
   background-position: 50%;
   background-size: cover;
 
   .title {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-weight: 100;
