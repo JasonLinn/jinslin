@@ -1,11 +1,8 @@
-@font-face {
-  font-family: jinxuan;
-  src: url("../font/jf-jinxuan-medium.otf");
-}
+@import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
 * {
   box-sizing: border-box;
-  font-family: jinxuan;
+  font-family: 'cwTeXYen';
   letter-spacing: 0.5px;
   color: $fontcolor;
 }
@@ -15,8 +12,8 @@ html {
   font-size: 18px;
   width: 100vw;
   overflow-x: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  // -webkit-transform: translate3d(0, 0, 0);
+  // transform: translate3d(0, 0, 0);
 }
 
 a {
@@ -35,7 +32,6 @@ a {
   margin: 0 auto;
 }
 
-
 .rwd-img {
   width: 100%;
   height: auto;
@@ -52,7 +48,7 @@ a {
 
 .bannerbox {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   background-position: 50%;
   background-size: cover;
 
@@ -60,7 +56,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-weight: 100;
     font-size: 3rem;
     text-shadow: 2px 2px 1px $black;
@@ -82,15 +78,16 @@ a {
   }
 }
 
-.wow{
+.wow {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-perspective:1000;
+  -webkit-perspective: 1000;
   perspective: 1000;
 }
 //media query
-@media (max-width:1200px) {
-  body,html{
+@media (max-width: 1200px) {
+  body,
+  html {
     font-size: 16px;
   }
   .container {
@@ -98,13 +95,13 @@ a {
   }
 }
 
-@media (max-width:996px) {
+@media (max-width: 996px) {
   .container {
     width: 95%;
   }
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .bannerbox {
     height: 60vh;
 
