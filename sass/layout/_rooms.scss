@@ -46,7 +46,7 @@
           border-bottom: 1px solid $orange;
         }
       }
-      img{
+      img {
         width: 25px;
         height: 25px;
       }
@@ -65,22 +65,62 @@
 
     .roomlistbox {
       position: relative;
-      margin-bottom: 80px;
+      #sliderPrev,
+      #sliderNext {
+        position: absolute;
+        top: 30%;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+      #sliderPrev {
+        left: 30%;
+      }
+      #sliderNext {
+        right: 30%;
+      }
+    }
+
+    #bx-pager ul {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0 10px;
+        height: 35px;
+        a {
+          display: block;
+          padding: 0 10px;
+          border: 1px solid $deepblue;
+          color: $deepblue;
+          line-height: 35px;
+          &.active {
+            background-color: rgba($deepblue, 0.8);
+            color: #fff;
+          }
+        }
+      }
     }
 
     #roomList {
       li.roomitem {
-        // background-color: $white;
         margin-bottom: 30px;
-        // box-shadow: 0 0 15px rgba($black,0.5);
-        .container{
+        width: 33%;
+        transform-style: 3d;
+
+        .itembox {
           display: flex;
+          flex-direction: column;
           padding: 40px 20px;
+          margin: 0 auto;
+          transform: scale(0.8);
+          transition: 0.5s;
         }
-        &:nth-of-type(even){
-          .container{
-            flex-direction: row-reverse
-          }
+        &.active .itembox {
+          transform: scale(1);
+          transition: 0.5s;
         }
         .pic {
           flex: 1.2;
@@ -89,25 +129,39 @@
           background-size: cover;
           background-position: 50%;
           background-repeat: no-repeat; // box-shadow: 1px 1px 12px $deepgrey;
-          box-shadow: 0px 3px 15px rgba($black,1);
+          box-shadow: 0px 3px 15px rgba($black, 1);
           z-index: 0;
         }
 
         .text {
           flex: 1.5;
           position: relative;
+          opacity: 0;
+          transition: 0.5s;
+          background-color: #fff;
+          padding: 20px;
+        }
+        &.active .text {
+          opacity: 1;
+          transition: 0.5s;
         }
 
         .title {
-          padding: 12px 12px 12px 60px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 12px;
           text-align: left;
           font-size: 1.4rem;
-          color: $black;
+          color: $white;
+          transform: translateX(-20%) translateY(-50%);
+          background-color: rgba($deepblue, 0.8);
         }
 
         .pricelist {
           display: flex;
-          padding: 10px 10px 10px 60px;
+          padding: 10px 0;
+          margin-top: 20px;
           // background-color: rgba($deepblue, 0.8);
           .priceitem {
             position: relative;
@@ -115,7 +169,7 @@
             font-size: 1.1rem;
             color: $orange;
 
-            &+.priceitem {
+            & + .priceitem {
               padding-left: 24px;
               margin-left: 12px;
               &:before {
@@ -140,9 +194,8 @@
         span {
           display: block;
           line-height: 1.5em;
-          padding-top: 20px;
-          padding-left: 60px;
-          &.equi{
+          padding-top: 10px;
+          &.equi {
             padding-top: 0;
           }
         }
@@ -351,8 +404,8 @@
         align-items: flex-start;
         line-height: 1.5em;
         padding: 3px 0;
-        .listtitle{
-          flex:1;
+        .listtitle {
+          flex: 1;
         }
         .text {
           flex: 10.5;
@@ -364,34 +417,53 @@
     }
   }
   //maincontent
+  @media (max-width: 1024px) {
+    .roomlistbox #sliderPrev {
+      left: 15%;
+    }
+    .roomlistbox #sliderNext {
+      right: 15%;
+    }
+  }
   @media (max-width: 768px) {
     .maincontent {
+      .roomlistbox #sliderPrev {
+        top: 50%;
+        left: 0;
+      }
+      .roomlistbox #sliderNext {
+        top: 50%;
+        right: 0;
+      }
       #roomList {
-        li.roomitem{
+        li.roomitem {
           display: block;
           width: 80%;
           margin: 30px auto;
           box-shadow: 0 0;
           // padding: 40px 60px;
-          .container{
+          .container {
             display: block;
             width: 100%;
             padding: 0;
           }
-          .pic{
-            box-shadow: 0 0;
-          }
-          .text{
+          .itembox {
             padding: 20px;
           }
-          .title{
+          .pic {
+            box-shadow: 0 0;
+          }
+          .text {
+            padding: 20px;
+          }
+          .title {
             font-size: 1.6rem;
             padding: 10px;
           }
-          .pricelist{
+          .pricelist {
             padding: 10px;
           }
-          span{
+          span {
             padding-left: 0;
           }
         }
@@ -436,12 +508,12 @@
             }
           }
         }
-        &.turnoff{
-          .title span.turnbtn{
+        &.turnoff {
+          .title span.turnbtn {
             transform: translateY(-50%) rotate(180deg);
             transition: 0.5s;
           }
-          .content{
+          .content {
             height: 0;
             transition: 0.5s;
           }
@@ -510,7 +582,6 @@
   }
   @media (max-width: 640px) {
     .maincontent {
-
       #roomList {
         li.roomitem {
           width: 95%;
@@ -526,27 +597,64 @@
           margin: 0;
           padding: 20px;
         }
-        .text{
+        .text {
           font-size: 0.8rem;
         }
       }
     }
   }
-  @media (max-width: 320px){
-    .maincontent{
-
-      #roomList li.roomitem {
-      .text{
-        padding: 10px;
+  @media (max-width: 480px) {
+    .maincontent {
+      h2 {
+        padding: 10px 0;
       }
-        .pricelist{
+      .roomlistbox #sliderPrev {
+        top: 50%;
+        left: 0;
+      }
+      .roomlistbox #sliderNext {
+        top: 50%;
+        right: 0;
+      }
+      #bx-pager ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+          flex: 1;
+          text-align: center;
+          align-self: center;
+          height: 160px;
+          a {
+            line-height: 1.2rem;
+            height: 100%;
+            padding: 5px 10px;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      #roomList li.roomitem .title {
+        font-size: 1rem;
+      }
+      #roomList li.roomitem .pricelist .priceitem + .priceitem {
+        margin-left: 0px;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    .maincontent {
+      #roomList li.roomitem {
+        .text {
+          padding: 10px;
+        }
+        .pricelist {
           padding: 10px 5px;
-          .priceitem{
+          .priceitem {
             font-size: 0.8rem;
           }
         }
+      }
     }
   }
-}
 }
 //page-rooms

@@ -5,6 +5,18 @@ $('#menuHam').on('change', function() {
   $('ul.menu').toggleClass('active');
 });
 
+switchToMobileLogoIcon();
+$(window).resize(function() {
+  switchToMobileLogoIcon();
+});
+function switchToMobileLogoIcon() {
+  if ($(window).width() < 769) {
+    $('header#header .logo img')
+      .attr('src', 'images/jinrilin-white.png')
+      .css('width', '40%');
+  }
+}
+
 // $(window).on('scrollstart', function() {
 //   $('header#header').stop(true, false).animate({
 //     'top': '-100px',
