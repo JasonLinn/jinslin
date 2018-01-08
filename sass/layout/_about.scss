@@ -3,7 +3,7 @@
   width: 100%;
 
   .bannerbox {
-    background-image: url('../images/banner/roomsbanner.jpg');
+    background-image: url('../images/banner/aboutbanner.jpg');
   }
 
   .maincontent {
@@ -47,8 +47,6 @@
 
 ul.picbox{
   display: flex;
-  width: 1170px;
-  margin: auto;
   li{
     flex:1;
     .pic{

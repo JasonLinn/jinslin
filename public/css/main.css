@@ -81,24 +81,9 @@ a {
 .deepblue {
   color: #054367; }
 
-.page {
-  padding-top: 70px; }
-
 .bannerbox {
   position: relative;
-<<<<<<< HEAD
-<<<<<<< HEAD
   height: 70vh;
-=======
-  width: 1170px;
-  height: 50vh;
-  margin: auto;
->>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
-=======
-  width: 1170px;
-  height: 50vh;
-  margin: auto;
->>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
   background-position: 50%;
   background-size: cover; }
   .bannerbox .title {
@@ -609,7 +594,7 @@ footer#footer .copyright {
   background-image: url("../images/contents_bg.png");
   width: 100%; }
   #page-about .bannerbox {
-    background-image: url("../images/banner/roomsbanner.jpg"); }
+    background-image: url("../images/banner/aboutbanner.jpg"); }
   #page-about .maincontent {
     padding: 20px 0 50px; }
     #page-about .maincontent h2 {
@@ -639,9 +624,7 @@ footer#footer .copyright {
         display: block;
         padding: 10px 0; }
     #page-about .maincontent ul.picbox {
-      display: flex;
-      width: 1170px;
-      margin: auto; }
+      display: flex; }
       #page-about .maincontent ul.picbox li {
         flex: 1; }
         #page-about .maincontent ul.picbox li .pic {
@@ -662,20 +645,9 @@ footer#footer .copyright {
     background-color: #fff;
     box-shadow: 1px 2px 5px #999; }
   #page-rooms .bx-wrapper .bx-pager.bx-default-pager a.active {
-    display: block;
-    width: 20px;
-    height: 20px;
     background-color: rgba(5, 67, 103, 0.7); }
-  #page-rooms .bx-wrapper .bx-pager.bx-default-pager a {
-    display: block;
-    width: 20px;
-    height: 20px; }
-  #page-rooms .bx-pager {
-    text-align: center; }
   #page-rooms .bannerbox {
     background-image: url("../images/banner/roomsbanner.jpg"); }
-  #page-rooms .bx-pager-item {
-    display: inline-block; }
   #page-rooms .maincontent {
     padding: 20px 0 50px; }
     #page-rooms .maincontent h2 {
@@ -707,7 +679,6 @@ footer#footer .copyright {
         display: block;
         padding: 10px 0; }
     #page-rooms .maincontent .roomlistbox {
-<<<<<<< HEAD
       position: relative; }
       #page-rooms .maincontent .roomlistbox #sliderPrev,
       #page-rooms .maincontent .roomlistbox #sliderNext {
@@ -738,15 +709,6 @@ footer#footer .copyright {
           #page-rooms .maincontent #bx-pager ul li a.active {
             background-color: rgba(5, 67, 103, 0.8);
             color: #fff; }
-=======
-      position: relative;
-      width: 1170px;
-      margin-bottom: 80px;
-      margin: auto; }
-<<<<<<< HEAD
->>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
-=======
->>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
     #page-rooms .maincontent #roomList li.roomitem {
       margin-bottom: 30px;
       width: 33%;
@@ -1228,7 +1190,7 @@ footer#footer .copyright {
     #page-tours .maincontent .noticebox {
       margin-bottom: 80px; }
       #page-tours .maincontent .noticebox .notice {
-        width: 100%;
+        width: 60%;
         margin: 0 auto;
         padding: 30px;
         background-color: rgba(255, 255, 255, 0.6); }
@@ -1260,10 +1222,11 @@ footer#footer .copyright {
         align-self: stretch;
         display: flex;
         flex-direction: column;
-        padding: 0 0 0 30px; }
+        padding: 0 10px; }
       #page-tours .maincontent #toursListBox li .title {
+        margin-bottom: 30px;
         color: #054367;
-        font-size: 1.5rem;
+        font-size: 1.15rem;
         font-weight: 500;
         width: 100%; }
       #page-tours .maincontent #toursListBox li .contentbox {
@@ -1451,10 +1414,10 @@ footer#footer .copyright {
         display: block;
         padding: 5px 0; }
     #page-traffic .maincontent .trafficbox #mapBox {
-      width: 100%;
+      width: 60%;
       height: 50vh; }
     #page-traffic .maincontent .trafficbox .boxitem {
-      width: 100%;
+      width: 60%;
       margin: 50px auto; }
     #page-traffic .maincontent .trafficinfo {
       padding: 30px;
