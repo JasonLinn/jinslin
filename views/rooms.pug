@@ -3,11 +3,12 @@ html(lang="en")
         include ./components/head.pug
     body
       include ./components/header.pug
-      #page-rooms
-        .bannerbox
-          h1.title.wow.fadeInUpCust
-            span 溫馨服務情
-            span 窩心衿日林
+      #page-rooms.page
+        //- .bannerbox
+        //-   h1.title.wow.fadeInUpCust
+        //-     span 溫馨服務情
+        //-     span 窩心衿日林
+
         .maincontent
           .topbox.wow.fadeInUp
             h2
@@ -20,6 +21,8 @@ html(lang="en")
               span 地址：宜蘭縣冬山鄉武淵村(三)路116號
               span 團體或多日定房另享有優惠！
           .roomlistbox
+<<<<<<< HEAD
+<<<<<<< HEAD
             #bx-pager
               ul
                 li 
@@ -39,6 +42,13 @@ html(lang="en")
             ul#roomList
               li.roomitem.wow.fadeInUp.active
                 .itembox
+=======
+=======
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
+            ul#roomList.bxslider
+              li.roomitem.wow.fadeInUp
+                .container
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
                   .pic(style="background-image:url('images/room/room01.png')")
                   .text
                     h3.title 渡假甜蜜雙人套房
@@ -107,7 +117,18 @@ html(lang="en")
                       span 平日：週日、週五   /  加人每人600
                       span 房內設施：
                       span.equi 高級床墊、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
+<<<<<<< HEAD
            
+=======
+            //- ul.pager
+            //-   li
+            //-   li.active
+            //-   li
+            //-   li
+<<<<<<< HEAD
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
+=======
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
           .servicelistbox.wow.fadeInUp
             h2
               img(src="images/menu/icon-g-07.png" alt="" class="rwd-img")
@@ -248,6 +269,8 @@ script.
   $(function (){
     var window_W = $(window).width();
     var sliderW = $('#roomList li').width();
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     if(window_W < 641){
       var sliderMargin = 30;
@@ -268,9 +291,62 @@ script.
         $slideElement.addClass('active').siblings().removeClass('active');
       }
     });
+=======
+
+    if(window_W < 641){
+      var sliderMargin = 200;
+    }else{
+       var sliderMargin = window_W * 0.2 / 2;
+    }
+    //一個slider佔畫面 40% ,margin20%
+
+    var roomSlider = $('#roomList').bxSlider({
+      //- pager:false,
+      controls:false,
+      touchEnabled:false,
+      infiniteLoop:true,
+      slideWidth: sliderW,
+      slideMargin: sliderMargin,
+      onSlideBefore:function($slideElement, oldIndex, newIndex){
+        $slideElement.addClass('active').siblings().removeClass('active');
+      }
+    });
+=======
+
+    if(window_W < 641){
+      var sliderMargin = 200;
+    }else{
+       var sliderMargin = window_W * 0.2 / 2;
+    }
+    //一個slider佔畫面 40% ,margin20%
+
+    var roomSlider = $('#roomList').bxSlider({
+      //- pager:false,
+      controls:false,
+      touchEnabled:false,
+      infiniteLoop:true,
+      slideWidth: sliderW,
+      slideMargin: sliderMargin,
+      onSlideBefore:function($slideElement, oldIndex, newIndex){
+        $slideElement.addClass('active').siblings().removeClass('active');
+      }
+    });
+
+      $('.bx-viewport').css('overflow','visible');
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
+
+      $('.bx-viewport').css('overflow','visible');
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
 
     $('.bx-viewport').css('overflow','visible');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
+=======
+>>>>>>> fb2e11f124ff9123a403c741790c0400fd4f6944
     $('#sliderNext').click(function(){
       roomSlider.goToNextSlide();
     })
