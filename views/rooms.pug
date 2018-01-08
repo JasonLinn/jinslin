@@ -3,25 +3,42 @@ html(lang="en")
         include ./components/head.pug
     body
       include ./components/header.pug
-      #page-rooms.page
-        //- .bannerbox
-        //-   h1.title.wow.fadeInUpCust
-        //-     span 溫馨服務情
-        //-     span 窩心衿日林
-
+      #page-rooms
+        .bannerbox
+          h1.title.wow.fadeInUpCust
+            span 溫馨服務情
+            span 窩心衿日林
         .maincontent
           .topbox.wow.fadeInUp
             h2
+              img(src="images/menu/icon-g-02.png" alt="" class="rwd-img")
               span 精緻客房
+              img(src="images/menu/icon-g-02.png" alt="" class="rwd-img")
             .contact
               span 訂房專線：0928-073438(中華) 0982-048-863(亞太)
               span 傳真：03-9509677 張小姐
               span 地址：宜蘭縣冬山鄉武淵村(三)路116號
               span 團體或多日定房另享有優惠！
           .roomlistbox
-            ul#roomList.bxslider
-              li.roomitem.wow.fadeInUp
-                .container
+            #bx-pager
+              ul
+                li 
+                  a(data-slide-index="0" href="") 渡假甜蜜雙人套房
+                li 
+                  a(data-slide-index="1" href="") 英式雙人套房
+                li 
+                  a(data-slide-index="2" href="") 印度風雙人房
+                li 
+                  a(data-slide-index="3" href="") 花嫁四人房
+                li 
+                  a(data-slide-index="4" href="") 溫馨親子四人房
+            #sliderPrev 
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            #sliderNext
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            ul#roomList
+              li.roomitem.wow.fadeInUp.active
+                .itembox
                   .pic(style="background-image:url('images/room/room01.png')")
                   .text
                     h3.title 渡假甜蜜雙人套房
@@ -35,7 +52,7 @@ html(lang="en")
                       span 房內設施：
                       span.equi 獨立陽台、有線 (無) 線ADSL寬頻上網 (請自備電腦)、獨立筒床、電視、冷暖氣機、盥洗用具、乾濕分離淋浴柱、冰箱、礦泉水
               li.roomitem.wow.fadeInUp
-                .container
+                .itembox
                   .pic(style="background-image:url('images/room/room02.png')")
                   .text
                     h3.title 英式雙人套房
@@ -49,7 +66,7 @@ html(lang="en")
                       span 房內設施：
                       span.equi 獨立筒床、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
               li.roomitem.wow.fadeInUp
-                .container
+                .itembox
                   .pic(style="background-image:url('images/room/room03.png')")
                   .text
                     h3.title 印度風雙人房
@@ -63,7 +80,7 @@ html(lang="en")
                       span 房內設施：
                       span.equi 獨立筒床、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
               li.roomitem.wow.fadeInUp
-                .container
+                .itembox
                   .pic(style="background-image:url('images/room/room04.png')")
                   .text
                     h3.title 花嫁四人房
@@ -77,7 +94,7 @@ html(lang="en")
                       span 房內設施：
                       span.equi 有線 (無) 線ADSL寬頻上網(請自備電腦)、獨立筒床、電視、盥洗用具、乾濕分離淋浴柱、冰箱、礦泉水
               li.roomitem.wow.fadeInUp
-                .container
+                .itembox
                   .pic(style="background-image:url('images/room/room05.png')")
                   .text
                     h3.title 溫馨親子四人房
@@ -90,14 +107,12 @@ html(lang="en")
                       span 平日：週日、週五   /  加人每人600
                       span 房內設施：
                       span.equi 高級床墊、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
-            //- ul.pager
-            //-   li
-            //-   li.active
-            //-   li
-            //-   li
+           
           .servicelistbox.wow.fadeInUp
             h2
+              img(src="images/menu/icon-g-07.png" alt="" class="rwd-img")
               span 貼心服務
+              img(src="images/menu/icon-g-07.png" alt="" class="rwd-img")
             .container
               ul.servicelist
                 li
@@ -223,7 +238,7 @@ html(lang="en")
                       li 包館退房或延期則須在一個月之前提出，逾期房間無人候補者，訂金則不予退還或保留。
                       li 出發前如遇天災或不可抗拒之因素，且經官方發佈，因而無法成行時，可延期或保留訂金三個月。
       include ./components/footer.pug
-
+      include ./components/loading.pug
 
 include ./components/script.pug
 script.
@@ -235,14 +250,15 @@ script.
     var sliderW = $('#roomList li').width();
 
     if(window_W < 641){
-      var sliderMargin = 200;
+      var sliderMargin = 30;
     }else{
        var sliderMargin = window_W * 0.2 / 2;
     }
     //一個slider佔畫面 40% ,margin20%
 
     var roomSlider = $('#roomList').bxSlider({
-      //- pager:false,
+      pager:true,
+      pagerCustom: '#bx-pager',
       controls:false,
       touchEnabled:false,
       infiniteLoop:true,
@@ -253,9 +269,7 @@ script.
       }
     });
 
-      $('.bx-viewport').css('overflow','visible');
-
-
+    $('.bx-viewport').css('overflow','visible');
 
     $('#sliderNext').click(function(){
       roomSlider.goToNextSlide();
