@@ -1,10 +1,6 @@
 #page-rooms {
   background-image: url('../images/contents_bg.png');
 
-  .bx-wrapper {
-    margin: 0 auto;
-  }
-
   .bx-wrapper .bx-pager.bx-default-pager a {
     width: 10px;
     height: 10px;
@@ -74,7 +70,7 @@
         text-align: center;
         font-size: 30px;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 999;
       }
       #sliderPrev {
         left: 30%;
@@ -96,20 +92,18 @@
           border: 1px solid $deepblue;
           color: $deepblue;
           line-height: 35px;
-          &.active {
-            background-color: rgba($deepblue, 0.8);
-            color: #fff;
-          }
+        }
+        &.active a {
+          background-color: rgba($deepblue, 0.8);
+          color: #fff;
         }
       }
     }
-
     #roomList {
+      // display: flex;
       li.roomitem {
-        margin-bottom: 30px;
-        width: 33%;
-        transform-style: 3d;
-
+        // margin-bottom: 30px;
+        // width: 33.33333%;
         .itembox {
           display: flex;
           flex-direction: column;
@@ -418,6 +412,10 @@
   }
   //maincontent
   @media (max-width: 1024px) {
+    .maincontent #roomList li.roomitem .title {
+      font-size: 1.2rem;
+      padding: 6px;
+    }
     .roomlistbox #sliderPrev {
       left: 15%;
     }
@@ -429,11 +427,11 @@
     .maincontent {
       .roomlistbox #sliderPrev {
         top: 50%;
-        left: 0;
+        left: 20px;
       }
       .roomlistbox #sliderNext {
         top: 50%;
-        right: 0;
+        right: 20px;
       }
       #roomList {
         li.roomitem {
@@ -582,9 +580,18 @@
   }
   @media (max-width: 640px) {
     .maincontent {
+      #bx-pager ul li {
+        margin: 0 5px;
+        a {
+          font-size: 0.9rem;
+        }
+      }
       #roomList {
         li.roomitem {
-          width: 95%;
+          width: 75%;
+          .text {
+            padding: 10px;
+          }
         }
       }
 
@@ -608,14 +615,6 @@
       h2 {
         padding: 10px 0;
       }
-      .roomlistbox #sliderPrev {
-        top: 50%;
-        left: 0;
-      }
-      .roomlistbox #sliderNext {
-        top: 50%;
-        right: 0;
-      }
       #bx-pager ul {
         display: flex;
         justify-content: center;
@@ -624,12 +623,15 @@
           flex: 1;
           text-align: center;
           align-self: center;
+          display: flex;
+          justify-content: center;
           height: 160px;
           a {
             line-height: 1.2rem;
             height: 100%;
             padding: 5px 10px;
             font-size: 1.2rem;
+            writing-mode: vertical-lr;
           }
         }
       }

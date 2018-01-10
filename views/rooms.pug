@@ -21,92 +21,93 @@ html(lang="en")
               span 團體或多日定房另享有優惠！
           .roomlistbox
             #bx-pager
-              ul
+              ul#sliderDot
                 li 
-                  a(data-slide-index="0" href="") 渡假甜蜜雙人套房
+                  a(href="#1") 渡假甜蜜雙人套房
                 li 
-                  a(data-slide-index="1" href="") 英式雙人套房
+                  a(href="#2") 英式雙人套房
                 li 
-                  a(data-slide-index="2" href="") 印度風雙人房
+                  a(href="#3") 印度風雙人房
                 li 
-                  a(data-slide-index="3" href="") 花嫁四人房
+                  a(href="#4") 花嫁四人房
                 li 
-                  a(data-slide-index="4" href="") 溫馨親子四人房
+                  a(href="#5") 溫馨親子四人房
             #sliderPrev 
               <i class="fa fa-chevron-left" aria-hidden="true"></i>
             #sliderNext
               <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            ul#roomList
-              li.roomitem.wow.fadeInUp.active
-                .itembox
-                  .pic(style="background-image:url('images/room/room01.png')")
-                  .text
-                    h3.title 渡假甜蜜雙人套房
-                    .content
-                      ul.pricelist
-                        li.priceitem 定價  3,500
-                        li.priceitem 假日  3,000
-                        li.priceitem 平日  2,300
-                      span 定價：農曆春節期間 / 假日：週六、國定連續假日
-                      span 平日：週日、週五   /  加人每人600
-                      span 房內設施：
-                      span.equi 獨立陽台、有線 (無) 線ADSL寬頻上網 (請自備電腦)、獨立筒床、電視、冷暖氣機、盥洗用具、乾濕分離淋浴柱、冰箱、礦泉水
-              li.roomitem.wow.fadeInUp
-                .itembox
-                  .pic(style="background-image:url('images/room/room02.png')")
-                  .text
-                    h3.title 英式雙人套房
-                    .content
-                      ul.pricelist
-                        li.priceitem 定價  3,500
-                        li.priceitem 假日  2,600
-                        li.priceitem 平日  2,000
-                      span 定價：農曆春節期間 / 假日：週六、國定連續假日
-                      span 平日：週日、週五   /  加人每人600
-                      span 房內設施：
-                      span.equi 獨立筒床、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
-              li.roomitem.wow.fadeInUp
-                .itembox
-                  .pic(style="background-image:url('images/room/room03.png')")
-                  .text
-                    h3.title 印度風雙人房
-                    .content
-                      ul.pricelist
-                        li.priceitem 定價  3,000
-                        li.priceitem 假日  2,600
-                        li.priceitem 平日  2,000
-                      span 定價：農曆春節期間 / 假日：週六、國定連續假日
-                      span 平日：週日、週五   /  加人每人600
-                      span 房內設施：
-                      span.equi 獨立筒床、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
-              li.roomitem.wow.fadeInUp
-                .itembox
-                  .pic(style="background-image:url('images/room/room04.png')")
-                  .text
-                    h3.title 花嫁四人房
-                    .content
-                      ul.pricelist
-                        li.priceitem 定價  4,500
-                        li.priceitem 假日  4,200
-                        li.priceitem 平日  3,200
-                      span 定價：農曆春節期間 / 假日：週六、國定連續假日
-                      span 平日：週日、週五   /  加人每人600
-                      span 房內設施：
-                      span.equi 有線 (無) 線ADSL寬頻上網(請自備電腦)、獨立筒床、電視、盥洗用具、乾濕分離淋浴柱、冰箱、礦泉水
-              li.roomitem.wow.fadeInUp
-                .itembox
-                  .pic(style="background-image:url('images/room/room05.png')")
-                  .text
-                    h3.title 溫馨親子四人房
-                    .content
-                      ul.pricelist
-                        li.priceitem 定價  4,000
-                        li.priceitem 假日  3,800
-                        li.priceitem 平日  2,800
-                      span 定價：農曆春節期間 / 假日：週六、國定連續假日
-                      span 平日：週日、週五   /  加人每人600
-                      span 房內設施：
-                      span.equi 高級床墊、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
+            #roomListBox
+              ul#roomList
+                li.roomitem.active(data-hash='1')
+                  .itembox
+                    .pic(style="background-image:url('images/room/room01.png')")
+                    .text
+                      h3.title 渡假甜蜜雙人套房
+                      .content
+                        ul.pricelist
+                          li.priceitem 定價  3,500
+                          li.priceitem 假日  3,000
+                          li.priceitem 平日  2,300
+                        span 定價：農曆春節期間 / 假日：週六、國定連續假日
+                        span 平日：週日、週五   /  加人每人600
+                        span 房內設施：
+                        span.equi 獨立陽台、有線 (無) 線ADSL寬頻上網 (請自備電腦)、獨立筒床、電視、冷暖氣機、盥洗用具、乾濕分離淋浴柱、冰箱、礦泉水
+                li.roomitem(data-hash='2')
+                  .itembox
+                    .pic(style="background-image:url('images/room/room02.png')")
+                    .text
+                      h3.title 英式雙人套房
+                      .content
+                        ul.pricelist
+                          li.priceitem 定價  3,500
+                          li.priceitem 假日  2,600
+                          li.priceitem 平日  2,000
+                        span 定價：農曆春節期間 / 假日：週六、國定連續假日
+                        span 平日：週日、週五   /  加人每人600
+                        span 房內設施：
+                        span.equi 獨立筒床、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
+                li.roomitem(data-hash='3')
+                  .itembox
+                    .pic(style="background-image:url('images/room/room03.png')")
+                    .text
+                      h3.title 印度風雙人房
+                      .content
+                        ul.pricelist
+                          li.priceitem 定價  3,000
+                          li.priceitem 假日  2,600
+                          li.priceitem 平日  2,000
+                        span 定價：農曆春節期間 / 假日：週六、國定連續假日
+                        span 平日：週日、週五   /  加人每人600
+                        span 房內設施：
+                        span.equi 獨立筒床、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
+                li.roomitem(data-hash='4')
+                  .itembox
+                    .pic(style="background-image:url('images/room/room04.png')")
+                    .text
+                      h3.title 花嫁四人房
+                      .content
+                        ul.pricelist
+                          li.priceitem 定價  4,500
+                          li.priceitem 假日  4,200
+                          li.priceitem 平日  3,200
+                        span 定價：農曆春節期間 / 假日：週六、國定連續假日
+                        span 平日：週日、週五   /  加人每人600
+                        span 房內設施：
+                        span.equi 有線 (無) 線ADSL寬頻上網(請自備電腦)、獨立筒床、電視、盥洗用具、乾濕分離淋浴柱、冰箱、礦泉水
+                li.roomitem(data-hash='5')
+                  .itembox
+                    .pic(style="background-image:url('images/room/room05.png')")
+                    .text
+                      h3.title 溫馨親子四人房
+                      .content
+                        ul.pricelist
+                          li.priceitem 定價  4,000
+                          li.priceitem 假日  3,800
+                          li.priceitem 平日  2,800
+                        span 定價：農曆春節期間 / 假日：週六、國定連續假日
+                        span 平日：週日、週五   /  加人每人600
+                        span 房內設施：
+                        span.equi 高級床墊、電視、盥洗用具、吹風機、淋浴衛浴、礦泉水
            
           .servicelistbox.wow.fadeInUp
             h2
@@ -241,40 +242,42 @@ html(lang="en")
       include ./components/loading.pug
 
 include ./components/script.pug
+//- script(src="plugin/bxslider/jquery.bxslider.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js")
 script.
   $('li.info .turnbtn').click(function(){
     $(this).parents('li.info').toggleClass('turnoff');
   })
-  $(function (){
-    var window_W = $(window).width();
-    var sliderW = $('#roomList li').width();
 
-    if(window_W < 641){
-      var sliderMargin = 30;
-    }else{
-       var sliderMargin = window_W * 0.2 / 2;
+  var owl = $('#roomList').owlCarousel({
+        center: true,
+        items:3,
+        callbacks:true,
+        loop:true,
+        margin:10,
+        URLhashListener:true,
+        startPosition: 'URLHash',
+        dotsContainer:'#sliderDot',
+        responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:1
+        }
     }
-    //一個slider佔畫面 40% ,margin20%
-
-    var roomSlider = $('#roomList').bxSlider({
-      pager:true,
-      pagerCustom: '#bx-pager',
-      controls:false,
-      touchEnabled:false,
-      infiniteLoop:true,
-      slideWidth: sliderW,
-      slideMargin: sliderMargin,
-      onSlideBefore:function($slideElement, oldIndex, newIndex){
-        $slideElement.addClass('active').siblings().removeClass('active');
-      }
     });
 
-    $('.bx-viewport').css('overflow','visible');
+    owl.on('translated.owl.carousel',function(e){
+       $('#roomList .owl-item.center').siblings().children('.roomitem').removeClass('active');
+       $('#roomList .owl-item.center .roomitem').addClass('active');
+       
+    })
 
-    $('#sliderNext').click(function(){
-      roomSlider.goToNextSlide();
+
+    $('#sliderNext').click(function() {
+      owl.trigger('next.owl.carousel');
     })
     $('#sliderPrev').click(function(){
-      roomSlider.goToPrevSlide();
+      owl.trigger('prev.owl.carousel');
     })
-  })
